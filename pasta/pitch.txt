@@ -1,7 +1,8 @@
-animação.
-cena 1 - um site com varias popups a aparecer e bastante confuso.
+uma animação.
+
+cena 1 - um site com varias popups bastante confuso.
 cena 2 - cara da pessoa frustrada.
-cena 3 - aparece o logo do CTB
-cena 4 - navegação simples e intuitiva no site CTB.
+cena 3 - aparece o logo do CTB.
+cena 4 - uma navegação simples e intuitiva no website CTB.
 cena 5 - cara da pessoa contente.
-cena 6 - logo do CTB e o slogan
+cena 6 - logo do CTB e o slogan.
