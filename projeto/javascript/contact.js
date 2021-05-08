@@ -8,6 +8,6 @@ function submit_message() {
     let message = { fname: fname, email: email, subject: subject }
     console.log(message)
     messageArray.push(message)
-    localStorage.setItem('message', JSON.stringify(messageArray),);
+    localStorage.setItem('message', JSON.stringify(messageArray));
 
 }
