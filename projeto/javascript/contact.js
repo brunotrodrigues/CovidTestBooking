@@ -5,7 +5,7 @@ function submit_message() {
     let email = document.getElementById('email').value;
     let subject = document.getElementById('subject').value;
 
-    let message = { fname: fname, email: email, subject: subject }
+    let message = {fname: fname, email: email, subject: subject}
     console.log(message)
     messageArray.push(message)
     localStorage.setItem('message', JSON.stringify(messageArray));
