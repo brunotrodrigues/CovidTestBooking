@@ -46,47 +46,48 @@
 
     <br><br><br><br>
 
-    <div>
-        <div>
-            <h3>Morada</h3>
-            <p>Rua da Bicicleta nº1 - Porto</p>
-            <br>
-            <h3>Horarios</h3>
-            <p>2ª a 6ªfeira - 10h às 19h</p>
-            <p>Sábados - 8h às 13h</p>
-            <p>Domingos e Feriados - Encerrado</p>
-            <br>
-            <h3>E-mails</h3>
-            <p>comercial@ctb.com</p>
+    <div class="container">
+        <p>Deixe-nos uma mensagem</p>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Morada</h3>
+                <p>Rua da Bicicleta nº1 - Porto</p>
+                <br>
+                <h3>Horarios</h3>
+                <p>2ª a 6ªfeira - 10h às 19h</p>
+                <p>Sábados - 8h às 13h</p>
+                <p>Domingos e Feriados - Encerrado</p>
+                <br>
+                <h3>E-mails</h3>
+                <p>comercial@ctb.com</p>
+            </div>
+            <div class="col">
+                <form action="">
+                    <br>
+                    <label for="fullname">Nome Completo:</label>
+                    <br>
+                    <input type="text" name="fullname" id="fname" placeholder="Ex: Gonçalo Pereira">
+                    <br>
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Ex: exemplo@email.pt">
+                    <br>
+                    <br>
+                    <label for="subject">Assunto:</label>
+                    <br>
+                    <br>
+                    <textarea name="subject" id="subject" cols="30" rows="10" placeholder="Escreva alguma coisa ..."></textarea>
+                    <br>
+                    <button type="submit" onclick="submit_message()">Submeter</button>
+                    <br>
+                    <br>
+                </form>
+            </div>
         </div>
-        <div>
-            <form action="">
-                <p>Deixe-nos uma mensagem</p>
-                <br>
-                <label for="fullname">Nome Completo:</label>
-                <br>
-                <input type="text" name="fullname" id="fname"
-                    placeholder="Ex: Gonçalo Pereira">
-                <br>
-                <br>
-                <label for="email">E-mail:</label>
-                <br>
-                <input type="email" name="email" id="email"
-                    placeholder="Ex: exemplo@email.pt">
-                <br>
-                <br>
-                <label for="subject">Assunto:</label>
-                <br>
-                <br>
-                <textarea name="subject" id="subject" cols="30" rows="10"
-                    placeholder="Escreva alguma coisa ..."></textarea>
-                <br>
-                <button type="submit" onclick="submit_message()">Submeter</button>
-                <br>
-                <br>
-            </form>
-        </div>
-    </div>
+    </div>    
 
     <script src="javascript/contact.js"></script>
 </body>
