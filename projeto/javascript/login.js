@@ -13,7 +13,7 @@ function submit_register(){
         const cellphone = document.getElementById('cellphone').value;
         const sex = document.getElementById('sex').value;    
     
-        const user = { username: username, fullname: fullname, password: password, email: email, address: address, birthday: birthday, bi: bi, cellphone: cellphone, sex: sex } 
+        const user = {username: username, fullname: fullname, password: password, email: email, address: address, birthday: birthday, bi: bi, cellphone: cellphone, sex: sex} 
         console.log(user)
         
         if (username != "" && password != "" && email != "" && username != " " && password != " " && email != " ") {
