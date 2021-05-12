@@ -31,6 +31,8 @@ function submit_register(){
     })    
 }
 
+
+
 function submit_login(){
     document.getElementById('loginform').addEventListener('submit', function (event) {
         event.preventDefault()    
