@@ -19,6 +19,7 @@ body{
 }
 .img{
     overflow: hidden;
+    position: relative;
 }
 .image_presentation{
     object-fit: cover;
@@ -27,4 +28,54 @@ body{
 
 .h1{
     position: absolute;
+}
+
+.btnimage {
+    position: absolute;
+    top: 41%;
+    left: 10%;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 99px;
+    width: 200px;
+}
+
+.welcometext {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 1000px;
+}
+
+.welcometext2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: black;
+    font-size: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 1000px;
+}
+
+.card {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+}
+
+.card2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    background-color: white;
 }
