@@ -1,14 +1,15 @@
 body{
     font-family: "Open Sans", sans-serif;
-    color: #444444;
+    color: black;
     background-color: #fff;
 }
+
 
 .nav-link:hover{
   text-decoration: underline;
   display: inline-block;
   text-underline-position: under;
-  text-decoration-color: blue;
+  text-decoration-color: #366EEA;
 }
 
 .img-fluid{
@@ -185,3 +186,4 @@ body{
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
   color: #fff;
 }
+
