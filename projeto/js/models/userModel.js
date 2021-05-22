@@ -2,7 +2,6 @@ export default class userModel{
     constructor(username, password, email, phone, birthday, address, sex, fullname, photo, points){
         this.username = username
         this.password = password
-        // this.confirmPassword = confirmPassword
         this.email = email
         this.phone = phone
         this.birthday = birthday
