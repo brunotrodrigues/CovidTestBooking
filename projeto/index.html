@@ -5,220 +5,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
-  <link rel="stylesheet" href="../projeto/css/index.css">
-  <title>Covid Test Booking</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <title>Document</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img src="img/LOGO.png" class="navbar-brand" height="50px" href="#" alt="">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#why-us">Sobre nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#services">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Testes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#contact">Contactos</a>
-          </li>
-          <li class="nav-item ps-2">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
-          </li>
-          <li class="nav-item ps-2">
-            <button type="button" class="btn btn-primary">Registar</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-
-
-
-
-
-
-    <div col="12">
-      <div class="img">
-        <img class="image_presentation" src="img/covidtry2.png" width="100%" height="500vh">
-        <p class="welcometext">BEM VINDOS À COVID TEST BOOKING</p>
+  <div id="contentor" class="container-fluid">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="img/LOGO.png" class="navbar-brand" height="50px" href="#" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#why-us">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#services">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">Testes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#contact">Contactos</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <li class="nav-item ps-2">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
+            </li>
+            <li class="nav-item ps-2">
+              <button type="button" class="btn btn-primary ml-3">Registar</button>
+            </li>
+          </form>
+        </div>
+      </nav>
+      <div class="imgContainer">
+        <img src="img/covidtry2.png" class="img-fluid" width="100%" height="500vh" alt="...">
+        <p class="welcometext">BEM VINDO Á COVID TEST BOOKING</p>
         <p class="welcometext2">Sem Preocupações, Sem Complicações</p>
         <button type="button" class="btn btn-primary btnimage">MARQUE AGORA</button>
-        
-        
-        <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="content">
-                  <h3>Porquê nós?</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    corporis.
-                  </p>
-                  <div class="text-center">
-                    <a href="#about" class="more-btn">Saber mais<i class="bx bx-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-8 d-flex align-items-stretch">
-                <div class="icon-boxes d-flex flex-column justify-content-center">
-                  <div class="row">
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                      <div class="icon-box1 mt-4 mt-xl-0">
-                        <i class="bx bx-receipt"></i>
-                        <h4>Simples</h4>
-                        <p>Numa questão de minutos
-                          consegue-se uma marcação,
-                          sem complicações
-                          e complexidades</p>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                      <div class="icon-box2 mt-4 mt-xl-0">
-                        <i class="bx bx-cube-alt"></i>
-                        <h4>Serviços</h4>
-                        <p>EA diversidade dos serviços
-                          disponibilizados oferece
-                          um leque de opções para ser
-                          testado como desejar</p>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                      <div class="icon-box3 mt-4 mt-xl-0">
-                        <i class="bx bx-images"></i>
-                        <h4>Apoio ao Cliente</h4>
-                        <p>Se tiver alguma dúvida
-                          em relação a um serviço ou alguma
-                          dificuldade,fornecemos um
-                          apoio personalizado
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <section id="why-us">
+          <div class="cointainer">
+            <div class="card why-us" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="col-lg-4 d-flex align-items-stretch">Porquê nós</h5>
+                <p class="card-text">Some exampleSome exampleSome exampleSome exampleSome exampleSome exampleSome example</p>
+                <a href="#" class="btn btn-primary">Saber mais</a>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </div>
-
-
-    <br><br><br><br><br>
-
-    <section class="about">
-      <div class="row">
-        <div class="col">
-          <div class="embed-responsive embed-responsive-1by1">
-            <iframe class="embed-responsive-item" src="..."></iframe>
-          </div>
-        </div>
-        <div class="col">
-          <p>dsnfds</p>
-        </div>
-      </div>
-    </section>
-
-    <br><br><br><br><br>
-
-    <section id="services" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Serviços</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <h4><a href="">Teste Deteção</a></h4>
-              <p>Trata-se do teste de eleição no diagnóstico da COVID-19 que pesquisa diretamente o coronavírus SARS-CoV-2 nas vias respiratórias.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <h4><a href="">Teste Antigénio</a></h4>
-              <p>O teste de antigénio é um de três métodos de testagem da Covid-19. Este teste permite identificar a presença de proteínas específicas do vírus SARS-CoV-2.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <h4><a href="">Teste Serológico</a></h4>
-              <p>O teste que permite avaliar a imunidade a todos aqueles que possam ter contactado com o vírus.</p>
-            </div>
-          </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-  </div>
-  
-  <!-- contactos -->
-  <br><br><br>
-
-  <div class="container">
-    <p>Deixe-nos uma mensagem</p>
-    <br>
-    <br>
-    <div class="row">
-      <div class="col">
-        <h3>Morada</h3>
-        <p>Rua da Bicicleta nº1 - Porto</p>
-        <br>
-        <h3>Horarios</h3>
-        <p>2ª a 6ªfeira - 10h às 19h</p>
-        <p>Sábados - 8h às 13h</p>
-        <p>Domingos e Feriados - Encerrado</p>
-        <br>
-        <h3>E-mails</h3>
-        <p>comercial@ctb.com</p>
-      </div>
-      <div class="col">
-        <form action="" id="contact">
-          <br>
-          <label for="fullname">Nome Completo:</label>
-          <br>
-          <input type="text" name="fullname" id="fname" placeholder="Ex: Gonçalo Pereira">
-          <br>
-          <br>
-          <label for="email">E-mail:</label>
-          <br>
-          <input type="email" name="email" id="email" placeholder="Ex: exemplo@email.pt">
-          <br>
-          <br>
-          <label for="subject">Assunto:</label><br>
-          <textarea name="subject" id="subject" cols="30" rows="10" placeholder="Escreva alguma coisa ..."></textarea>
-          <br>
-          <button type="submit" onclick="submit_message()">Submeter</button>
-          <br>
-          <br>
-        </form>
-      </div>
+      
+      
+      
     </div>
   </div>
-
-  
-
-
 </body>
-
 
 </html>

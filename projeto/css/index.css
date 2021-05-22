@@ -3,14 +3,26 @@ body{
     color: black;
     background-color: #fff;
 }
+.container-fluid{
+  padding: 0px;
+}
 
+li {
+  list-style-type: none;
+}
 
 .nav-link:hover{
   text-decoration: underline;
   display: inline-block;
   text-underline-position: under;
   text-decoration-color: #366EEA;
+  color: #1977cc !important;
 }
+
+.nav-link{
+  color: black !important;
+}
+
 
 .img-fluid{
     object-fit: none;
@@ -19,6 +31,7 @@ body{
     width: 100%;
     max-height: 460px;
     margin-bottom: 20px;
+
 }
 
 .btn{
@@ -26,13 +39,17 @@ body{
     width: 100px;
 }
 .img{
-    overflow: hidden;
-    position: relative;
-    
+  height: 100%;
+  display: inline-block;
+  vertical-align:top; /*to remove unwanted whitespace */
+  position: absolute;
 }
+
 .image_presentation{
     object-fit: cover;
     position: relative;
+    /* 
+    overflow-x: hidden; */
 }
 
 .h1{
@@ -41,8 +58,8 @@ body{
 
 .btnimage {
     position: absolute;
-    top: 41%;
-    left: 10%;
+    top: 32%;
+    left: 11.5%;
     font-size: 16px;
     padding: 12px 24px;
     cursor: pointer;
@@ -52,7 +69,7 @@ body{
 
 .welcometext {
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 10%;
     color: black;
     font-weight: bold;
@@ -73,7 +90,7 @@ body{
     width: 1000px;
 }
 
-.why-us .content {
+.why-us{
     position: absolute;
     padding: 30px;
     top: 55%;
