@@ -5,12 +5,12 @@ export default class userController{
         this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
     }
 
-    register(username, password, confirmPassword, email, phone, birthday, address, sex, fullname, photo, points) {
+    register(username, password, email, phone, birthday, address, sex, fullname, photo, points) {
         if (!this.users.some(user => user.username === username)) {
-            this.users.push(new UserModel(username, password));
+            this.users.push(new UserModel(username, password, email, phone, birthday, address, sex, fullname, photo, points));
             localStorage.setItem('users', JSON.stringify(this.users))
         } else {
-            throw Error(`User with username "${username}" already exists!`);
+            throw Error(`O nome de utilizador "${username}" já existe!`);
         }
     }
 
@@ -18,7 +18,7 @@ export default class userController{
         if (this.users.some(user => user.username === username && user.password === password)) {
             sessionStorage.setItem('loggedUser', username)
         } else {
-            throw Error('Invalid login!');
+            throw Error('Login Invalido!');
         }
     }
 
