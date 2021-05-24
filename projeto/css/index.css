@@ -159,6 +159,41 @@ li {
   text-align: center;
 }
 
+.det{
+  position: absolute;
+  padding: 30px;
+  text-align: center;
+  top: 100%;
+  left: 20%;
+  width: 20%;
+  background: #fff;
+  border-radius: 4px;
+  color: black;
+}
+
+.ant{
+  position: absolute;
+  padding: 30px;
+  text-align: center;
+  top: 100%;
+  left: 40%;
+  width: 20%;
+  background: #fff;
+  border-radius: 4px;
+  color: black;
+}
+
+.sero{
+  position: absolute;
+  padding: 30px;
+  text-align: center;
+  top: 100%;
+  left: 60%;
+  width: 20%;
+  background: #fff;
+  border-radius: 4px;
+  color: black;
+}
 
 
 
