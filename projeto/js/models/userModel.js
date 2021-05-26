@@ -1,5 +1,5 @@
 export default class userModel{
-    constructor(username, password, confirmPassword, email, phone, birthday, address, sex, type, fullname, photo, points){
+    constructor(username, password, confirmPassword, email, phone, birthday, address, gender, type, fullname, photo, points){
         this.username = username
         this.password = password
         this.confirmPassword = confirmPassword
@@ -7,10 +7,10 @@ export default class userModel{
         this.phone = phone
         this.birthday = birthday
         this.address = address
-        this.sex = sex
+        this.gender = gender
         this.fullname = fullname
-        this.photo = photo
-        this.points = points
-        this.type = type
+        this.photo = ''
+        this.points = 0
+        this.type = 'user'
     }
 }

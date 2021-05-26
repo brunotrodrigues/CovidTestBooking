@@ -39,7 +39,7 @@
               <a class="nav-link" aria-current="page" href="#services">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Testes</a>
+              <a class="nav-link" aria-current="page" href="#">Centros</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="#contacts">Contactos</a>
@@ -55,6 +55,7 @@
           </form>
         </div>
       </nav>
+      
       <div class="imgContainer" id="why-us">
         <img src="img/covidtry2.png" class="img-fluid" width="100%" height="500vh" alt="...">
         <p class="welcometext">BEM VINDO Á COVID TEST BOOKING</p>
@@ -139,44 +140,51 @@
     </div>
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="container" id="contacts">
-      <h5>Deixe-nos uma mensagem</h5>
-      <br><br>
-      <div class="row">
-        <div class="col">
-          <h3>Morada</h3>
-          <p>Rua D. Sancho I nº981 - Vila do Conde</p>
-          <br>
-          <h3>Horarios</h3>
-          <p>2ª a 6ª feira - 10h ás 19h</p>
-          <p>Sábados - 8h ás 13h</p>
-          <p>Domingos e Feriados - Encerrados</p>
-          <br>
-          <h3>E-mail</h3>
-          <p>comercial@ctb.pt</p>
-        </div>
-        <div class="col">
-          <form action="">
+    <div class="contact">
+      <div class="container" id="contacts">
+        <h5>Deixe-nos uma mensagem</h5>
+        <br><br>
+        <div class="row">
+          <div class="col">
+            <h3>Morada</h3>
+            <p>Rua D. Sancho I Nº981 - Vila do Conde</p>
             <br>
-            <label for="fullname">Nome Completo:</label>
+            <h3>Horários</h3>
+            <p>2ª a 6ª feira - 10h ás 19h</p>
+            <p>Sábados - 8h ás 13h</p>
+            <p>Domingos e Feriados - Encerrados</p>
             <br>
-            <input type="text" name="fullname" id="fname" placeholder="Ex: Gonçalo Pereira">
-            <br><br>
-            <label for="email">E-mail:</label>
-            <br>
-            <input type="text" name="email" id="email" placeholder="exemplo@email.pt">
-            <br><br>
-            <label for="subject">Assunto:</label>
-            <br>
-            <textarea name="subject" id="subject" cols="36" rows="10" placeholder="Escreva alguma coisa..."></textarea>
-            <br>
-            <button type="submit" class="btn btn-primary">Submeter</button>
-            <br>
-          </form>
+            <h3>E-mail</h3>
+            <p>comercial@ctb.pt</p>
+          </div>
+          <div class="col">
+            <form action="">
+              <br>
+              <label for="fullname">Nome Completo:</label>
+              <br>
+              <input type="text" name="fullname" id="fname" size="34" placeholder="Ex: Gonçalo Pereira">
+              <br><br>
+              <label for="email">E-mail:</label>
+              <br>
+              <input type="text" name="email" id="email" size="34" placeholder="exemplo@email.pt">
+              <br><br>
+              <label for="subject">Assunto:</label>
+              <br>
+              <textarea name="subject" id="subject" cols="36" rows="10" placeholder="Escreva alguma coisa..."></textarea>
+              <br>
+              <button type="submit" class="btn btn-primary">Submeter</button>
+              <br>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <footer id="footer" class="page-footer font-small pt-4 mt-5 ">
+    <div id="footer" class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="#"> CovidTestBooking</a>
+    </div>
+  </footer>
 
   <!-- Modal log In -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -195,15 +203,13 @@
             <div class="form-group d-flex justify-content-center">
               <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Login</h5>
             </div>
-            <label for="usernamelogin" class="form-group d-flex justify-content-center">Username:</label>
             <div class="form-group d-flex justify-content-center">
               <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_login"
-                aria-describedby="nameHelp">
+                aria-describedby="nameHelp" placeholder="Username">
             </div>
-            <label for="passwordlogin" class="form-group d-flex justify-content-center">Password:</label>
             <div class="form-group d-flex justify-content-center">
               <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_password_login"
-                aria-describedby="nameHelp">
+                aria-describedby="nameHelp" placeholder="Password">
             </div>
             <div class="d-flex justify-content-center mb-3">
               <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3" data-dismiss="modal">Cancelar</button>
@@ -229,66 +235,64 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-
         </div>
         <div class="modal-body">
-          <div id="frm">
+          <div>
             <div class="form-group d-flex justify-content-center">
               <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Registo</h5>
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txtEmail_Register"
-                aria-describedby="emailHelp" placeholder="Email">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register"
+                aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txtUsername_Register"
-                aria-describedby="nameHelp" placeholder="Name">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register"
+                aria-describedby="fullnameHelp" placeholder="Nome Completo">
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txtLocation_Register"
-                aria-describedby="LocationHelp" placeholder="Location">
+              <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register"
+                aria-describedby="emailHelp" placeholder="E-mail">
             </div>
             <div class="form-group d-flex justify-content-center">
-              <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="Genre_Register">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register"
+                aria-describedby="addressHelp" placeholder="Endereço">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="number" max="999999999" min="111111111" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register"
+                aria-describedby="phoneHelp" placeholder="Telefone">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gen_register">
+                <option value="" disabled selected>Escolha uma opção</option>
                 <option value="male">Masculino</option>
                 <option value="female">Feminino</option>
               </select>
-
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="date" name="bday" max="3000-12-31" min="1000-01-01"
-                class="form-control col-lg-6 mt-2 modalField" id="dBirth_Register">
+              <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
+                class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register">
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txtpassword_Register"
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_register"
                 aria-describedby="weightHelp" placeholder="Password">
-              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txtConfirmpassword_Register"
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_confirmPassword_register"
                 aria-describedby="pwconfimHelp" placeholder="Confirm">
-
             </div>
-
             <div class="d-flex justify-content-center mb-3">
               <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
-                data-dismiss="modal">Cancel</button>
+                data-dismiss="modal">Cancelar</button>
+                <!-- data-target="LINK PARA A PROXIMA PAGINA" -->
               <button type="submit" class="btn btn-primary navButton col-lg-3" id="btnRegister"
-                data-target="html/activities.html">Register</button>
-
+                data-target="">Registar</button>
             </div>
-            <div id="mdlRegisterMessage" class="col-lg-12 d-flex justify-content-center">
-              
+            <div id="mdlRegisterMessage" class="col-lg-12 d-flex justify-content-center">  
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
-
-
-
   </div>
   <!--SignIn Modal-->
-
 </body>
 
 </html>

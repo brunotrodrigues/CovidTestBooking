@@ -10,6 +10,6 @@ export default class labsModel{
         this.schedule = schedule
         this.price = price
         this.comments = comments
-        this.likes = likes
+        this.likes = 0
     }
 }
