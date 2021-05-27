@@ -1,0 +1,24 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    background-color: #ffffff;
+}
+.container-fluid{
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  display: inline-block;
+  text-underline-position: under;
+  text-decoration-color: #366EEA;
+  color: #1977cc !important;
+}
+
+.nav-link{
+    color: black !important;
+}
