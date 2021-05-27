@@ -25,6 +25,11 @@ class App {
                 id: 2,
                 username: 'user2',
                 password: 'pass2'
+            },
+            {
+                id:3,
+                username: 'admin',
+                password: 'admin'
             }
         ];
 
