@@ -19,7 +19,17 @@ class App {
             {
                 id: 1,
                 username: 'admin',
-                password: 'admin'
+                password: 'admin',
+                confirmPassword: 'admin',
+                email: 'admin@admin.pt',
+                phone: '123456789',
+                birthday: '',
+                address: '',
+                gender: '',
+                fullname: 'admin',
+                photo: '',
+                points: 999999999,
+                type: 'admin'
             }
         ];
 
