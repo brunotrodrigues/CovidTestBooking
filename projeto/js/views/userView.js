@@ -14,9 +14,15 @@ export default class UserView {
 
         // Gestão do form de registo
         this.frmRegister = document.querySelector('#frmRegister');
-        this.registerUsername = document.querySelector('#txtUsernameRegister');
-        this.registerPassword = document.querySelector('#txtPasswordRegister');
-        this.registerPassword2 = document.querySelector('#txtPasswordRegister2');
+        this.registerUsername = document.querySelector('#txt_username_register');
+        this.registerFullname = document.querySelector('#txt_fullname_register');
+        this.registerEmail = document.querySelector('#txt_email_register');
+        this.registerAddress = document.querySelector('#txt_address_register');
+        this.registerPhone = document.querySelector('#txt_phone_register');
+        this.registerGender = document.querySelector('#txt_gender_register');
+        this.registerBirthday = document.querySelector('#date_birthday_register');
+        this.registerPassword = document.querySelector('#txt_password_register');
+        this.registerPassword2 = document.querySelector('#txt_confirmPassword_register');
         this.registerMessage = document.querySelector('#registerMessage')
         this.bindRegisterForm();
 

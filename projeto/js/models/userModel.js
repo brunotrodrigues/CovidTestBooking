@@ -1,6 +1,5 @@
-export default class userModel{
-    constructor(id,username, password, confirmPassword, email, phone, birthday, address, gender, type, fullname, photo, points){
-        this.id = id
+export default class UserModel{
+    constructor(username, password, confirmPassword, email, phone, birthday, address, gender, type, fullname, photo, points){
         this.username = username
         this.password = password
         this.confirmPassword = confirmPassword

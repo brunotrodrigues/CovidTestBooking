@@ -17,7 +17,6 @@ class App {
     #importDataFixtures() {
         const users = [
             {
-                id: 1,
                 username: 'admin',
                 password: 'admin',
                 confirmPassword: 'admin',
