@@ -1,180 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid Test Booking</title>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- REFERÊNCIA AO CSS DO BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" href="css\index.css">
+  <link rel="stylesheet" href="css\labs.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" href="css\labs.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <style type="text/css">
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: calc(100vh - 45px);
+      width: 100%;
+    }
+
+    #left {
+      padding: 0px;
+    }
+
+    #right {
+      padding: 0;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 
 </head>
 
 <body>
+  <h2>Laboratórios</h2>
 
-    <!-- BARRA DE NAVEGAÇÃO -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="img\LOGO.png" class="navbar-brand" height="50px" href="#" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#why-us">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#services">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Centros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#contacts">Contactos</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <li class="nav-item ps-2">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
-            </li>
-            <li class="nav-item ps-2">
-              <button type="button" class="btn btn-primary ml-3" data-toggle="modal" data-target="#SigninModal">Registar</button>
-            </li>
-          </form>
-        </div>
-      </nav>
-    <!-- CATÁLOGO -->
-    <div class="container">
-        <!-- CATÁLOGO: TITULOS -->
-        <div class="row">
-            <div class="col">
-                <h1 class="display-3">Bands Catalog</h1>
-                <p class="lead">The best bands of the world!</p>
-                <hr class="my-2" />
+  <!-- <div class="row"> -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col" id="left">
+        <div id="filters">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownButton" data-toggle="dropdown">
+              Tipo de Teste
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownButton">
+              <a class="dropdown-item" href="#">Antigénio</a>
+              <a class="dropdown-item" href="#">Deteção (PCR)</a>
+              <a class="dropdown-item" href="#">Anticorpos</a>
             </div>
+          </div>
+          <div class="form-group">
+            <label for="formControlRange">Example Range input</label>
+            <input type="range" class="form-control-range" id="formControlRange">
+          </div>
+
+          <div class="row">
+            <button id="filters" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Mais gostos</button>
+            <button id="filters" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Mais comentários</button>
+            <button id="filters" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Mais comentados</button>
+
+          </div>
+
         </div>
-        <!-- CATÁLOGO: FORMULÁRIO PARA FILTROS E ORDENAÇÃO -->
-        <div class="row">
-            <div class="col">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <label for="sltGenre">Genre: </label>
-                        <select class="form-control m-2" name="" id="sltGenre">
-                            <option value="">All</option>
-                            <option value="Pop-Rock">Teste de diagnóstico</option>
-                            <option value="Metal">Teste Antigénio</option>
-                            <option value="Jazz">Teste Serológicos</option>
-                        </select>
-                    </div>
-                    <div class="form-group m-2">
-                        <label for="txtBand">Band's name:</label>
-                        <input id="txtBand" type="text" class="form-control m-2" />
-                    </div>
-                    <button id="btnFilter" type="button" class="btn btn-primary">FILTER</button>
-                    <button id="btnSort" type="button" class="btn btn-primary m-2">SORT</button>
-                    <button id="btnAdd" type="button" class="btn btn-outline-primary m-2" style="visibility: hidden">ADD
-                        BAND</button>
-                </form>
-            </div>
-        </div>
-        <!-- CATÁLOGO: EXIBIÇÃO DAS BANDAS (VAZIO INICIALMENTE) -->
-        <div class="row">
-            <div class="col">
-                <hr class="my-2" />
-                <p id="myCatalog"></p>
-            </div>
-        </div>
-    </div>
 
 
-    <!-- MODAL REGISTO -->
-    <div class="modal fade" id="mdlRegister" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">REGISTER</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <p id=""></p>
+
+        <div class="card card-margin">
+          <div class="card-header no-border">
+            <h5 class="card-title">USF Serpa Pinto</h5>
+          </div>
+          <div class="card-body pt-0">
+            <div class="widget-49">
+              <div class="widget-49-title-wrapper">
+                <div class="card-header border-0">
+                  <img src="img\serpa_pinto.jpg" alt="img_centros">
                 </div>
-                <form id="frmRegister">
-                    <div class="modal-body">
-
-                        <div class="mb-3">
-                            <label for="txtUsernameRegister" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="txtUsernameRegister"
-                                placeholder="Enter username" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtPasswordRegister" class="form-label">Password</label>
-                            <input type=" password" class="form-control" id="txtPasswordRegister"
-                                placeholder="Enter password" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtPasswordRegister2" class="form-label">Confirm Password</label>
-                            <input type=" password" class="form-control" id="txtPasswordRegister2"
-                                placeholder="Enter password confirmation" />
-                        </div>
-                        <div id="registerMessage" class="mb-3"></div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary" value="REGISTER"></input>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL LOGIN -->
-    <div class="modal fade" id="mdlLogin" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="widget-49-meeting-info">
+                  <span class="widget-49-pro-title">PRO-08235 DeskOpe. Website</span>
+                  <span class="widget-49-meeting-time">12:00 to 13.30 Hrs</span>
                 </div>
-                <form id="frmLogin">
-                    <div class="modal-body">
-
-                        <div class="mb-3">
-                            <label for="txtUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="txtUsername" placeholder="Enter username" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtPassword" class="form-label">Password</label>
-                            <input type=" password" class="form-control" id="txtPassword"
-                                placeholder="Enter password" />
-                        </div>
-                        <div id="loginMessage" class="mb-3"></div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary" value="LOGIN"></input>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    </div>
-                </form>
+              </div>
+              <ol class="widget-49-meeting-points">
+                <li class="widget-49-meeting-item"><span>Expand module is removed</span></li>
+                <li class="widget-49-meeting-item"><span>Data migration is in scope</span></li>
+                <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span>
+                </li>
+              </ol>
+              <div class="widget-49-meeting-action">
+                <a href="#" class="btn btn-sm btn-flash-border-primary">Marque Agora</a>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="card card-margin">
+          <div class="card-header no-border">
+            <h5 class="card-title">USF Aníbal Cunha</h5>
+          </div>
+          <div class="card-body pt-0">
+            <div class="widget-49">
+              <div class="widget-49-title-wrapper">
+                <div class="card-header border-0">
+                  <img src="img\anibal_cunha.jpg" alt="img_centros">
+                </div>
+                <div class="widget-49-meeting-info">
+                  <span class="widget-49-pro-title">PRO-08235 DeskOpe. Website</span>
+                  <span class="widget-49-meeting-time">12:00 to 13.30 Hrs</span>
+                </div>
+              </div>
+              <ol class="widget-49-meeting-points">
+                <li class="widget-49-meeting-item"><span>Expand module is removed</span></li>
+                <li class="widget-49-meeting-item"><span>Data migration is in scope</span></li>
+                <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span>
+                </li>
+              </ol>
+              <div class="widget-49-meeting-action">
+                <a href="#" class="btn btn-sm btn-flash-border-primary">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-margin">
+          <div class="card-header no-border">
+            <h5 class="card-title">POSTO DA FOZ DO DOURO</h5>
+          </div>
+          <div class="card-body pt-0">
+            <div class="widget-49">
+              <div class="widget-49-title-wrapper">
+                <div class="card-header border-0">
+                  <img src="img\fozdouro.jpg" alt="img_centros">
+                </div>
+                <div class="widget-49-meeting-info">
+                  <span class="widget-49-pro-title">PRO-08235 DeskOpe. Website</span>
+                  <span class="widget-49-meeting-time">12:00 to 13.30 Hrs</span>
+                </div>
+              </div>
+              <ol class="widget-49-meeting-points">
+                <li class="widget-49-meeting-item"><span>Expand module is removed</span></li>
+                <li class="widget-49-meeting-item"><span>Data migration is in scope</span></li>
+                <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span>
+                </li>
+              </ol>
+              <div class="widget-49-meeting-action">
+                <a href="#" class="btn btn-sm btn-flash-border-primary">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" id="right">
+        <div id="map"></div>
+      </div>
     </div>
 
 
+  </div>
+
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {lat: 41.1496100, lng: -8.6109900},
+        zoom: 12,
+      });
+    }
+  </script>
 
 
-    <!-- REFERÊNCIA AO APP.JS -->
-    <script type="module" src="js/app.js"></script>
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvb3VJtmsMAqTQR1EU3xWY2Z35iSBEC1U&callback=initMap&libraries=&v=weekly"
+    async>
+  </script>
 
-    <!-- REFERÊNCIA AO JS DO BOOTSTRAP E DEPENDÊNCIAS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
 
+  <script type="module" src="js/views/catalogView.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
