@@ -1,10 +1,13 @@
 import UserView from './views/userView.js'
+// import ProfileView from './views/profileView.js'
+
 
 class App {
     constructor() {
         this.routes = {
             '': [UserView],
-            'index': [UserView]
+            'index': [UserView],
+            // 'profile': [ProfileView]
         };
 
         // import dummy data for testing purposes

@@ -30,7 +30,9 @@ export default class UserView {
         this.loginButton = document.querySelector('#btnLogin');
         this.registerButton = document.querySelector('#btnRegister');
         this.logoutButton = document.querySelector('#btnLogout');
-        this.bindLogout();
+        if (this.logoutButton) {
+            this.bindLogout();
+        }
 
 
         // Atualiza botões tendo em conta se o user está autenticado ou não
@@ -47,7 +49,7 @@ export default class UserView {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
                     throw Error('Password and Confirm Password are not equal');
                 }
-                this.userController.register(this.registerUsername.value, this.registerPassword.value, this.registerFullname.value, this.registerEmail.value, this.registerAddress.value, this.registerPhone.value, this.registerGender.value, this.registerBirthday.value);
+                this.userController.register(this.registerUsername.value, this.registerPassword.value, this.registerPassword2.value, this.registerEmail.value, this.registerPhone.value, this.registerBirthday.value, this.registerAddress.value, this.registerGender.value, this.registerFullname.value);
                 this.displayMessage('register', 'User registered with success!', 'success');
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar

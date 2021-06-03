@@ -1,194 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/index.css">
-  <title>CTB</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Covid Test Booking</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/icon.png" rel="icon">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="css\index.css" rel="stylesheet">
+
 </head>
 
 <body>
-  <div id="home" class="container-fluid">
-    <div class="col-12">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="img/LOGO.png" class="navbar-brand" height="50px" href="#" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#why-us">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#services">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Centros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#contacts">Contactos</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <li class="nav-item ps-2">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
-            </li>
-            <li class="nav-item ps-2">
-              <button type="button" class="btn btn-primary ml-3" data-toggle="modal" data-target="#registerModal">Registar</button>
-            </li>
-            <li class="nav-item ps-2">
-              <button type="button" class="btn btn-primary" style="visibility: hidden;">Logout</button>
-            </li>
-          </form>
-        </div>
-      </nav>
-      
-      <div class="imgContainer" id="why-us">
-        <img src="img/covidtry2.png" class="img-fluid" width="100%" height="500vh" alt="...">
-        <p class="welcometext">BEM VINDO Á COVID TEST BOOKING</p>
-        <p class="welcometext2">Sem Preocupações, Sem Complicações</p>
-        <button type="button" class="btn btn-primary btnimage">MARQUE AGORA</button>
-        <section>
-          <div class="cointainer">
-            <div class="card why-us" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="">Porquê nós</h5>
-                <p class="card-text">Some exampleSome exampleSome exampleSome exampleSome exampleSome exampleSome example</p>
-                <a href="#services" class="btn btn-primary btnmore">Saber mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="cointainer">
-            <div class="card simple" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="">Simples</h4>
-                <p class="card-text">Numa questão de minutos consegue-se uma marcação, sem complicações e complexidades</p>
-              </div>
-            </div>
-          </div>
-          <div class="cointainer">
-            <div class="card serv" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="">Serviços</h4>
-                <p class="card-text">A diversidade dos serviços disponibilizados oferece um leque de opções para ser testado como desejar</p>
-              </div>
-            </div>
-          </div>
-          <div class="cointainer">
-            <div class="card client" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="">Apoio ao Cliente</h4>
-                <p class="card-text">Se tiver alguma dúvida em relação a um serviço ou alguma dificuldade,fornecemos um apoio personalizado</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <br><br><br>
-
-    <!-- <div class="video">
-      
-      <div class="embed-responsive embed-responsive-21by9">
-        <iframe class="embed-responsive-item" src="..."></iframe>
-      </div>
- 
-    </div> -->
-
-    <div class="container" id="services">
-      <div class="services">
-        <h2>Serviços</h2>
-        <p>Estes são os serviços que disponibilizamos</p>
-        <div class="cointainer">
-          <div class="card det" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="">Testes Deteção</h4>
-              <p class="card-text">Numa questão de minutos consegue-se uma marcação, sem complicações e complexidades</p>
-            </div>
-          </div>
-        </div>
-        <div class="cointainer">
-          <div class="card ant" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="">Testes Antigénio</h4>
-              <p class="card-text">Numa questão de minutos consegue-se uma marcação, sem complicações e complexidades</p>
-            </div>
-          </div>
-        </div>
-        <div class="cointainer">
-          <div class="card sero" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="">Testes Serológico</h4>
-              <p class="card-text">Numa questão de minutos consegue-se uma marcação, sem complicações e complexidades</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="contact">
-      <div class="container" id="contacts">
-        <h5>Deixe-nos uma mensagem</h5>
-        <br><br>
-        <div class="row">
-          <div class="col">
-            <br>
-            <h3>Morada</h3>
-            <p>Rua D. Sancho I Nº981 - Vila do Conde</p>
-            <br>
-            <h3>Horários</h3>
-            <p>2ª a 6ª feira - 10h ás 19h</p>
-            <p>Sábados - 8h ás 13h</p>
-            <p>Domingos e Feriados - Encerrados</p>
-            <br>
-            <h3>E-mail</h3>
-            <p>comercial@ctb.pt</p>
-          </div>
-          <div class="col">
-            <form action="">
-              <br>
-              <label for="fullname">Nome Completo:</label>
-              <br>
-              <input type="text" name="fullname" id="fname" size="34" placeholder="Ex: Gonçalo Pereira">
-              <br><br>
-              <label for="email">E-mail:</label>
-              <br>
-              <input type="text" name="email" id="email" size="34" placeholder="exemplo@email.pt">
-              <br><br>
-              <label for="subject">Assunto:</label>
-              <br>
-              <textarea name="subject" id="subject" cols="36" rows="10" placeholder="Escreva alguma coisa..."></textarea>
-              <br>
-              <button type="submit" class="btn btn-primary">Submeter</button>
-              <br>
-            </form>
-          </div>
-        </div>
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">ajudacliente@covidtesting.com</a>
+        <i class="icofont-phone"></i> +351 914 358 147
+        <i class="icofont-google-map"></i> 981, R. Dom Sancho I, PT
       </div>
     </div>
   </div>
-  <footer id="footer" class="page-footer font-small pt-4 mt-5 ">
-    <div id="footer" class="footer-copyright text-center py-3">© 2021 Copyright:
-      <a href="#"> CovidTestBooking</a>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo mr-auto"><img src="img\LOGO.png" alt=yes"" class="img-fluid"></a>
+
+      <nav class="nav-menu d-none d-lg-block align-items-center">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#tiposteste">Testes</a></li>
+          <li><a href="#">Postos</a></li>
+          <li><a href="#contacts">Contactos</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#loginModal" class="appointment-btn scrollto" data-toggle="modal" id="btnLogin">Login</a>
+
+      <a href="#registerModal" class="appointment-btn scrollto" data-toggle="modal" id="btnRegister">Registar</a>
+
+      <a href="#" class="appointment-btn scrollto" style="visibility: hidden;" id="btnLogout">Logout</a>
+
+      <button type="button" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</button>
     </div>
-  </footer>
+  </header><!-- End Header -->
+
+  <!-- ======= Image Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Bem vindos à Covid Test Booking</h1>
+      <h2>Sem Preocupações, Sem Complicações</h2>
+      <a href="#" class="btn-get-started scrollto">Marque Agora</a>
+    </div>
+  </section><!-- End Image -->
+
+  <main id="main">
+
+    <!-- ======= Porquê nós Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Porquê nós?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad
+                corporis.
+              </p>
+              <div class="text-center">
+                <a href="#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Simples</h4>
+                    <p>Numa questão de minutos
+                      consegue-se uma marcação,
+                      sem complicações
+                      e complexidades</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Serviços</h4>
+                    <p>A diversidade dos serviços
+                      disponibilizados oferece
+                      um leque de opções para ser
+                      testado como desejar</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Apoio ao Cliente</h4>
+                    <p>Se tiver alguma dúvida
+                      em relação a um serviço ou alguma
+                      dificuldade,fornecemos um
+                      apoio personalizado
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+              data-autoplay="true"></a>
+          </div>
+
+          <div
+            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
+            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus
+              laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla
+              tenetur. Suscipit aut voluptate.</p>
+
+            <div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident</p>
+            </div>
+
+            <div">
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <h4><a href="">Teste Deteção</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <h4><a href="">Teste Antigénio</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <h4><a href="">Teste Serológico</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Tipos de Teste Section ======= -->
+    <section id="tiposteste" class="tiposteste">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Tipos de Teste</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Teste de Deteção</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">Teste Antigénio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">Teste Serológico</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Teste de Deteção</h3>
+                    <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata
+                      raqer a videna mareta paulona marka</p>
+                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa
+                      odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni
+                      nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img\test_deteçao.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Teste Antigénio</h3>
+                    <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata
+                      raqer a videna mareta paulona marka</p>
+                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt
+                      est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque
+                      beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img\teste_antigenio.jpeg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Teste Serológico</h3>
+                    <p class="font-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus
+                      non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque
+                      necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum
+                      odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img\teste_serologico.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Perguntas Frequentes</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse"
+                href="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2"
+                class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3"
+                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
+                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
+                  quis
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4"
+                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
+                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
+                  gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5"
+                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem
+                dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
+                  tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <section id="map"></section>
+
+    <script>
+      let map;
+      
+      function initMap() {
+        console.log("in")
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 41.1496100, lng: -8.6109900 },
+          zoom: 12,
+        });
+
+        console.log(map)
+      }
+    </script>
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvb3VJtmsMAqTQR1EU3xWY2Z35iSBEC1U&callback=initMap&libraries=&v=weekly"
+      async>
+      </script>
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contacts" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contactos</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <h4>Localização:</h4>
+                <p>981, R. Dom Sancho I, 4480-876</p>
+              </div>
+
+              <div class="email">
+                <h4>Email:</h4>
+                <p>ajudacliente@covidtesting.com</p>
+              </div>
+
+              <div class="phone">
+                <h4>Telefone:</h4>
+                <p>+351 914 358 147</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <div>
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="E-mail"
+                    data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="text-center"><a href="#" class="appointment-btn">Submeter</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+      <div class="text-center">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Covid Test Booking</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
 
   <!-- MODAL LOGIN -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -201,7 +487,7 @@
           </button>
         </div>
         <div class="modal-body">
-          
+
           <form id="frmLogin">
             <div class="form-group d-flex justify-content-center">
               <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Login</h5>
@@ -215,11 +501,13 @@
                 aria-describedby="nameHelp" placeholder="Password">
             </div>
             <div class="d-flex justify-content-center mb-3">
-              <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary navButton col-lg-3" id="btnLogin" data-target="">Login</button>   
+              <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3"
+                data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary navButton col-lg-3" id="btnLogin"
+                data-target="">Login</button>
             </div>
             <div id="loginMessage" class="col-lg-12 d-flex justify-content-center"></div>
-          </form>  
+          </form>
         </div>
       </div>
     </div>
@@ -238,63 +526,72 @@
           </button>
         </div>
         <div class="modal-body">
-            <form id="frmRegister">
-              <div class="form-group d-flex justify-content-center">
-                <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Registo</h5>
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register"
-                  aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register"
-                  aria-describedby="fullnameHelp" placeholder="Nome Completo">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register"
-                  aria-describedby="emailHelp" placeholder="E-mail">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register"
-                  aria-describedby="addressHelp" placeholder="Morada">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register"
-                  aria-describedby="phoneHelp" placeholder="Telefone">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gender_register">
-                  <option value="" disabled selected>Escolha uma opção</option>
-                  <option value="male">Masculino</option>
-                  <option value="female">Feminino</option>
-                </select>
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
-                  class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-                <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_register"
-                  aria-describedby="weightHelp" placeholder="Password">
-                <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_confirmPassword_register"
-                  aria-describedby="pwconfimHelp" placeholder="Confirm">
-              </div>
-              <div class="d-flex justify-content-center mb-3">
-                <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
-                  data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary navButton col-lg-3">Registar</button>
-              </div>
-              <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
-            </form>
+          <form id="frmRegister">
+            <div class="form-group d-flex justify-content-center">
+              <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Registo</h5>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register"
+                aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register"
+                aria-describedby="fullnameHelp" placeholder="Nome Completo">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register"
+                aria-describedby="emailHelp" placeholder="E-mail">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register"
+                aria-describedby="addressHelp" placeholder="Morada">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register"
+                aria-describedby="phoneHelp" placeholder="Telefone">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gender_register">
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+              </select>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
+                class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_register"
+                aria-describedby="weightHelp" placeholder="Password">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
+                id="txt_confirmPassword_register" aria-describedby="pwconfimHelp" placeholder="Confirm">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
+                data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary navButton col-lg-3">Registar</button>
+            </div>
+            <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
-  <!--javascript-->
-  <script type="module" src="js/app.js"></script>
+
+  <script type="module" src="js\app.js"></script>
 
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

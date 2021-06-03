@@ -5,9 +5,9 @@ export default class userController{
         this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
     }
 
-    register(username, password, email, phone, birthday, address, gender, fullname, photo, points) {
+    register(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points) {
         if (!this.users.some(user => user.username === username)) {
-            this.users.push(new UserModel(username, password, email, phone, birthday, address, gender, fullname, photo, points));
+            this.users.push(new UserModel(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points));
             localStorage.setItem('users', JSON.stringify(this.users))
         } else {
             throw Error(`O nome de utilizador "${username}" já existe!`);
