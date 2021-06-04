@@ -12,6 +12,10 @@ a:hover {
   color: #366EEA;
   text-decoration: none;
 }
+.btn {
+  border-radius: 99px;
+    width: 100px;
+}
 
 /* Top Bar */
 
