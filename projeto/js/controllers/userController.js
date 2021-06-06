@@ -4,7 +4,13 @@ export default class userController{
     constructor(){
         this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
     }
-
+    getAccountRole(username){
+        let user=this.users.filter(user=>user.username===username)[0]
+        return user.type
+    }
+    getAll(){
+        return this.users
+    }
     register(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points) {
         if (!this.users.some(user => user.username === username)) {
             this.users.push(new UserModel(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points));
@@ -28,6 +34,9 @@ export default class userController{
     
     isLogged() {
         return localStorage.getItem('loggedUser') ? true : false
+    }
+    removeUser(username){
+        console.log("eliminar ")
     }
 }
 

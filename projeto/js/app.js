@@ -1,4 +1,5 @@
 import UserView from './views/userView.js'
+import AdminView from './views/adminView.js'
 // import ProfileView from './views/profileView.js'
 
 
@@ -7,6 +8,7 @@ class App {
         this.routes = {
             '': [UserView],
             'index': [UserView],
+            'adminUser':[AdminView]
             // 'profile': [ProfileView]
         };
 

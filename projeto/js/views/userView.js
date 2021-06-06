@@ -69,6 +69,10 @@ export default class UserView {
             try {
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
                 this.displayMessage('login', 'Utilizador realizado com sucesso!', 'success');
+                if(this.userController.getAccountRole(this.loginUsername.value)=="admin")
+                {
+                    window.location.href = "../html/adminUser.html";
+                }
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
                 setTimeout(() => { location.reload() }, 1000);
@@ -103,8 +107,6 @@ export default class UserView {
             this.loginButton.style.visibility = 'visible'
             this.registerButton.style.visibility = 'visible'
             this.logoutButton.style.visibility = 'hidden'
-            
-                
         }
     }
 
