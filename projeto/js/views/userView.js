@@ -1,4 +1,4 @@
-import UserController from '../controllers/UserController.js'
+import UserController from '../controllers/userController.js'
 
 export default class UserView {
     constructor() {
@@ -47,10 +47,10 @@ export default class UserView {
             event.preventDefault();
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('Password and Confirm Password are not equal');
+                    throw Error('As duas passwords não são iguais');
                 }
                 this.userController.register(this.registerUsername.value, this.registerPassword.value, this.registerPassword2.value, this.registerEmail.value, this.registerPhone.value, this.registerBirthday.value, this.registerAddress.value, this.registerGender.value, this.registerFullname.value);
-                this.displayMessage('register', 'User registered with success!', 'success');
+                this.displayMessage('register', 'Utilizador registado com sucesso!', 'success');
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
                 setTimeout(() => { location.reload() }, 1000);
@@ -68,7 +68,7 @@ export default class UserView {
             event.preventDefault();
             try {
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
-                this.displayMessage('login', 'User logged in with success!', 'success');
+                this.displayMessage('login', 'Utilizador realizado com sucesso!', 'success');
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
                 setTimeout(() => { location.reload() }, 1000);
