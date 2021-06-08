@@ -7,6 +7,7 @@ export default class adminView {
         
     }
 
+    // renderizar a table
     list() {
         let table = document.querySelector("#tabelaUser")
         
@@ -26,13 +27,15 @@ export default class adminView {
             })
             string+=`<td><input type='button' value='Delete' id="${username}" class="deleteBtn" /></td>`
             string+="</tr>"
-            table.innerHTML+=string
+            table.innerHTML+=string     //adiciona ao elemento table
+
             const btns=document.querySelectorAll(".deleteBtn")
             console.log(this.userController.getAll())
-            for (let i = 0; i < btns.length; i++) {
-                const btn = btns[i];
-                btn.addEventListener("click",function(e){
-                    this.userController.removeUser(id)
+            for (const btn of btns) {
+                btn.addEventListener("click", () => {
+                    const username = btn.id
+                    console.log(username)
+                    this.userController.removeUser(username)
                 })
                 
             }

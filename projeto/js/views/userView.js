@@ -102,7 +102,7 @@ export default class UserView {
             this.registerButton.style.visibility = 'hidden'
             this.logoutButton.style.visibility = 'visible'
             let loggedUser=localStorage.getItem('loggedUser')
-            document.querySelector('.container').innerHTML += `<img src="https://via.placeholder.com/50" /><p class="">Bem-vindo ${loggedUser}</p>`;
+            document.querySelector('.container').innerHTML += `<img class="welcomeimage" src="https://via.placeholder.com/50"/><p class="welcomeuser">Bem-vindo ${loggedUser}</p>`;
         } else {
             this.loginButton.style.visibility = 'visible'
             this.registerButton.style.visibility = 'visible'

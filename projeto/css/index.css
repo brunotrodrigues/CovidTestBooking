@@ -8,6 +8,16 @@ a {
   color: #366EEA;
 }
 
+.welcomeuser{
+  padding-top: 130px;
+  padding-right: 120px;
+  
+}
+
+.welcomeimage{
+  padding-top: 110px;
+}
+
 a:hover {
   color: #366EEA;
   text-decoration: none;

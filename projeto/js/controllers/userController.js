@@ -36,7 +36,7 @@ export default class userController{
         return localStorage.getItem('loggedUser') ? true : false
     }
     removeUser(username){
-        console.log("eliminar ")
+        console.log("eliminar")
     }
 }
 
