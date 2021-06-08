@@ -5,6 +5,11 @@ body{
 }
 .container-fluid{
   padding: 0px;
+} 
+
+th, td{
+  padding: 15px;
+  border: 1px solid black;
 }
 
 li {

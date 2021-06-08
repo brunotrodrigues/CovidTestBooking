@@ -9,13 +9,8 @@ a {
 }
 
 .welcomeuser{
-  padding-top: 130px;
-  padding-right: 120px;
-  
-}
-
-.welcomeimage{
-  padding-top: 110px;
+  padding-right: 30px;
+  padding-top: 15px;
 }
 
 a:hover {
