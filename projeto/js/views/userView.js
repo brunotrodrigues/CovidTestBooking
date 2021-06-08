@@ -49,7 +49,21 @@ export default class UserView {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
                     throw Error('As duas passwords não são iguais');
                 }
-                this.userController.register(this.registerUsername.value, this.registerPassword.value, this.registerPassword2.value, this.registerEmail.value, this.registerPhone.value, this.registerBirthday.value, this.registerAddress.value, this.registerGender.value, this.registerFullname.value);
+                let newuser={
+                    username : this.registerUsername.value,
+                    password : this.registerPassword.value,
+                    confirmPassword: this.registerPassword2.value,
+                    email : this.registerEmail.value,
+                    phone : this.registerPhone.value,
+                    birthday: this.registerBirthday.value,
+                    address : this.registerAddress.value,
+                    gender : this.registerGender.value,
+                    fullname : this.registerFullname.value,
+                    photo: '',
+                    points : 0,
+                    type : 'user' }
+                console.log(newuser)
+                this.userController.register(newuser);
                 this.displayMessage('register', 'Utilizador registado com sucesso!', 'success');
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar

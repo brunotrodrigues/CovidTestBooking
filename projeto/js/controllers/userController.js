@@ -11,9 +11,9 @@ export default class userController{
     getAll(){
         return this.users
     }
-    register(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points) {
-        if (!this.users.some(user => user.username === username)) {
-            this.users.push(new UserModel(username, password, confirmPassword, email, phone, birthday, address, gender, fullname, photo, points));
+    register(newuser) {
+        if (!this.users.some(user => user.username === newuser.username)) {
+            this.users.push(new UserModel(newuser));
             localStorage.setItem('users', JSON.stringify(this.users))
         } else {
             throw Error(`O nome de utilizador "${username}" já existe!`);
@@ -37,7 +37,12 @@ export default class userController{
     }
     
     removeUser(username){
+        let remUser = confirm(`Deseja mesmo remover o user ${username}?`)
+    if (remUser) {
+        localStorage.setItem("users", JSON.stringify(this.users.filter(user=>user.username!=username)))
         
+        location.reload()
+    }
     }
 }
 
