@@ -1,5 +1,6 @@
-export default class labsModel{
-    constructor(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada){
+export default class LabModel{
+    
+    constructor(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada, descriçao){
         this.name = name
         this.description = description
         this.photo = photo
@@ -10,9 +11,8 @@ export default class labsModel{
         this.schedule = schedule
         this.price = price
         this.comments = comments
-        this.likes = 0
+        this.likes = likes
         this.morada = morada
-
     }
 }
 

@@ -1,17 +1,18 @@
-import labsModel from '../models/labsModel.js'
+import LabModel from '../models/LabModel.js'
 
-export default class labsController{
+export default class labController {
     constructor() {
         this.labs = localStorage.labs ? JSON.parse(localStorage.labs) : [];
         this.currentLab = sessionStorage.lab ? sessionStorage.lab : null
+
     }
 
     create(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada) {
         if (!this.labs.some(lab => lab.name === name)) {
-            this.labs.push(new labModel(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, norada));
+            this.labs.push(new LabModel(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada));
             localStorage.setItem('labs', JSON.stringify(this.labs))
         } else {
-            throw Error(`Labs with name "${name}" already exists!`);
+            throw Error(`Lab with name "${name}" already exists!`);
         }
     }
 
@@ -20,26 +21,26 @@ export default class labsController{
         localStorage.setItem('labs', JSON.stringify(this.labs))
     }
 
-    setCurrentlab(name) {
-        this.currentlab = name
+    setCurrentLab(name) {
+        this.currentLab = name
         sessionStorage.setItem("lab", name);
     }
 
-    getCurrentlab() {
-        return this.labs.find(lab => lab.name == this.currentlab)
+    getCurrentLab() {
+        return this.labs.find(lab => lab.name == this.currentLab)
     }
 
-    getlabs(filterName = '', filtertype = '', isSorted = false) {
-        let filteredlabs = this.labs.filter(
+    getLabs(filterName = '', filterType = '', isSorted = false) {
+        let filteredLabs = this.labs.filter(
             lab =>
                 (lab.name.toLowerCase().includes(filterName.toLowerCase()) || filterName === '')
                 &&
-                (lab.type == filtertype || filtertype === '')
+                (lab.type == filterType || filterType === '')
         )
 
-        filteredlabs = isSorted ? filteredlabs.sort(this.#compare) : filteredlabs
+        filteredLabs = isSorted ? filteredLabs.sort(this.#compare) : filteredLabs
 
-        return filteredlabs
+        return filteredLabs
     }
 
     #compare(labA, labB) {
@@ -49,7 +50,5 @@ export default class labsController{
             return -1;
         return 0;
     }
-
-
 
 }
