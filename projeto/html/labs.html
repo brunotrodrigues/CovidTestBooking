@@ -28,7 +28,7 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-            <a href="index.html" class="logo mr-auto"><img src="../img\LOGO.png" alt=yes"" class="img-fluid"></a>
+            <a href="index.html" class="logo mr-auto"><img src="../img/LOGO.png" alt="" class="img-fluid"></a>
 
             <nav class="nav-menu d-none d-lg-block align-items-center">
                 <ul>
@@ -50,22 +50,19 @@
             <button type="button" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</button>
         </div>
     </header><!-- End Header -->
-
-
     <!-- <div class="section-title">
     <h2 id="labTitle">Laboratórios</h2>
   </div> -->
 
-    <!-- <div class="row"> -->
-
+    <!-- <div class="row"> -->    
     <div class="container-fluid">
         <div class="row" id="fila">
             <div class="col" id="left">
                 <form class="form-inline">
                     <div class="form-group">
-                        <label for="sltType">Type: </label>
+                        <label for="sltType">Tipos:</label>
                         <select class="form-control m-2" name="" id="sltType">
-                            <option value="">All</option>
+                            <option value="">Todos</option>
                             <option value="antigénio">Antigénio</option>
                             <option value="serológicos">Serológicos</option>
                             <option value="diagnostico">Diagnóstico</option>
@@ -80,7 +77,6 @@
                     <button id="btnAdd" type="button" class="btn btn-outline-primary m-2" style="visibility: hidden">ADD
                         BAND</button>
                 </form>
-
                 <div class="">
                     <!-- CATÁLOGO: EXIBIÇÃO DAS BANDAS (VAZIO INICIALMENTE) -->
                     <div class="row">
@@ -92,14 +88,12 @@
                 </div>
 
             </div>
-            
             <div class="col" id="right">
                 <div id="map"></div>
             </div>
 
         </div>
     </div>
-
 
     </div>
 
@@ -120,79 +114,7 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvb3VJtmsMAqTQR1EU3xWY2Z35iSBEC1U&callback=initMap&libraries=&v=weekly"
         async>
-        </script>
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit
-                    in iste officiis commodi quidem hic quas.</p>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row mt-5">
-
-                <div class="col-lg-4">
-                    <div class="info">
-                        <div class="address">
-                            <h4>Location:</h4>
-                            <p>981, R. Dom Sancho I, 4480-876</p>
-                        </div>
-
-                        <div class="email">
-                            <h4>Email:</h4>
-                            <p>ajudacliente@covidtesting.com</p>
-                        </div>
-
-                        <div class="phone">
-                            <h4>Call:</h4>
-                            <p>+351 914 358 147</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-8 mt-5 mt-lg-0">
-
-                    <div>
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                <div class="validate"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                data-msg="Please write something for us" placeholder="Message"></textarea>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="text-center"><a href="#" class="appointment-btn">Enviar Mensagem</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Contact Section -->
-
+        </script>    
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -209,7 +131,8 @@
 
 
     <!-- MODAL LOGIN -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    
+    <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -243,10 +166,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--MODAL REGISTAR-->
-    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+    <!-- <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -310,7 +234,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- JS File -->
     <script type="module" src="../js/app.js"></script>

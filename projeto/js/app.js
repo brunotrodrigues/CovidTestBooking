@@ -1,6 +1,8 @@
 import UserView from './views/userView.js'
 import AdminView from './views/adminView.js'
-// import ProfileView from './views/profileView.js'
+import ProfileView from './views/profileView.js'
+import LabView from './views/CatalogView.js'
+import DetailLabView from './views/DetailLabView.js'
 
 
 class App {
@@ -8,8 +10,10 @@ class App {
         this.routes = {
             '': [UserView],
             'index': [UserView],
-            'adminUser':[AdminView]
-            // 'profile': [ProfileView]
+            'adminUser':[AdminView],
+            'profile': [ProfileView],
+            'labs': [LabView],
+            'detailLab':[DetailLabView]
         };
 
         // import dummy data for testing purposes

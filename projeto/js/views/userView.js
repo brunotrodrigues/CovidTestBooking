@@ -94,7 +94,6 @@ export default class UserView {
                 this.displayMessage('login', err, 'danger');
             }
         });
-
     }
 
     /**
@@ -123,7 +122,6 @@ export default class UserView {
             this.logoutButton.style.visibility = 'hidden'
         }
     }
-
     /**
      * Função que define e exibe uma mensagem de sucesso ou de erro
      * @param {string} event tipo de evento (login ou register)
