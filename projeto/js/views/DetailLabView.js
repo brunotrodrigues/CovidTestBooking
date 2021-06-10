@@ -1,4 +1,5 @@
 import labController from '../controllers/LabController.js'
+import UserController from '../controllers/UserController.js'
 
 export default class DetailLabView {
 
@@ -13,6 +14,10 @@ export default class DetailLabView {
         this.labPrice = document.querySelector('#labPrice')
         this.labMorada = document.querySelector('#labMorada')
         this.labSchedule = document.querySelector('#labschedule')
+        this.confirmMessage = document.querySelector('#confirmMessage')
+        this.frmConfirm = document.querySelector('#frmConfirm');
+
+
 
 
 
@@ -29,6 +34,28 @@ export default class DetailLabView {
         this.labMorada.innerHTML = currentLab.morada
         this.labSchedule.innerHTML = currentLab.schedule
         this.labPhoto.src = currentLab.photo
+    }
+
+    // generateSchedule(lab) {
+    //     let html = `
+        
+    //     `
+
+    bindconfirmForm() {
+        this.frmConfirm.addEventListener('submit', event => {
+            event.preventDefault();
+                this.displayMessage('confirm', 'Marcação efetuada!', 'success');
+                // Espera 1 seg. antes de fazer refresh à pagina
+                // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
+                setTimeout(() => { location.reload() }, 1000);
+            });
+    }
+
+
+
+    displayMessage(text, type) {
+        const message = `<div class="alert alert-${type}" role="alert">${text}</div>`;
+        this.confirmMessage.innerHTML = message
     }
 
 }

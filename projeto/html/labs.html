@@ -28,7 +28,7 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-            <a href="index.html" class="logo mr-auto"><img src="../img/LOGO.png" alt="" class="img-fluid"></a>
+            <a href="index.html" class="logo mr-auto"><img src="../img\LOGO.png" alt="" class="img-fluid"></a>
 
             <nav class="nav-menu d-none d-lg-block align-items-center">
                 <ul>
@@ -46,21 +46,19 @@
 
             <a href="#" class="appointment-btn scrollto" style="visibility: hidden;" id="btnLogout">Logout</a>
 
-            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal" id="btnRegister">Registar</button> -->
             <button type="button" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</button>
         </div>
     </header><!-- End Header -->
-    <!-- <div class="section-title">
-    <h2 id="labTitle">Laboratórios</h2>
-  </div> -->
 
-    <!-- <div class="row"> -->    
+
+    
+    <br>
     <div class="container-fluid">
         <div class="row" id="fila">
             <div class="col" id="left">
                 <form class="form-inline">
                     <div class="form-group">
-                        <label for="sltType">Tipos:</label>
+                        <label for="sltType">Tipo</label>
                         <select class="form-control m-2" name="" id="sltType">
                             <option value="">Todos</option>
                             <option value="antigénio">Antigénio</option>
@@ -69,14 +67,15 @@
                         </select>
                     </div>
                     <div class="form-group m-2">
-                        <label for="txtLab">Band's name:</label>
+                        <label for="txtLab">Nome:</label>
                         <input id="txtLab" type="text" class="form-control m-2" />
                     </div>
-                    <button id="btnFilter" type="button" class="btn btn-primary">FILTER</button>
-                    <button id="btnSort" type="button" class="btn btn-primary m-2">SORT</button>
-                    <button id="btnAdd" type="button" class="btn btn-outline-primary m-2" style="visibility: hidden">ADD
-                        BAND</button>
+                    <div>
+                        <button id="btnFilter" type="button" class="btn btn-primary">Filtro</button>
+                        <button id="btnSort" type="button" class="btn btn-primary m-2">Ordenar</button>
+                    </div>
                 </form>
+
                 <div class="">
                     <!-- CATÁLOGO: EXIBIÇÃO DAS BANDAS (VAZIO INICIALMENTE) -->
                     <div class="row">
@@ -88,6 +87,7 @@
                 </div>
 
             </div>
+            
             <div class="col" id="right">
                 <div id="map"></div>
             </div>
@@ -95,7 +95,8 @@
         </div>
     </div>
 
-    </div>
+
+  
 
     <script>
         let map;
@@ -114,7 +115,8 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvb3VJtmsMAqTQR1EU3xWY2Z35iSBEC1U&callback=initMap&libraries=&v=weekly"
         async>
-        </script>    
+        </script>
+
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -129,112 +131,6 @@
         </div>
     </footer><!-- End Footer -->
 
-
-    <!-- MODAL LOGIN -->
-    
-    <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-
-                    <form id="frmLogin">
-                        <div class="form-group d-flex justify-content-center">
-                            <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Login</h5>
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_login"
-                                aria-describedby="nameHelp" placeholder="Username">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_password_login"
-                                aria-describedby="nameHelp" placeholder="Password">
-                        </div>
-                        <div class="d-flex justify-content-center mb-3">
-                            <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3"
-                                data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary navButton col-lg-3" id="btnLogin"
-                                data-target="">Login</button>
-                        </div>
-                        <div id="loginMessage" class="col-lg-12 d-flex justify-content-center"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!--MODAL REGISTAR-->
-
-    <!-- <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-flex justify-content-center col-lg-11">
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="frmRegister">
-                        <div class="form-group d-flex justify-content-center">
-                            <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Registo</h5>
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register"
-                                aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register"
-                                aria-describedby="fullnameHelp" placeholder="Nome Completo">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register"
-                                aria-describedby="emailHelp" placeholder="E-mail">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register"
-                                aria-describedby="addressHelp" placeholder="Morada">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register"
-                                aria-describedby="phoneHelp" placeholder="Telefone">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField"
-                                id="txt_gender_register">
-                                <option value="" disabled selected>Escolha uma opção</option>
-                                <option value="male">Masculino</option>
-                                <option value="female">Feminino</option>
-                            </select>
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
-                                class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register">
-                        </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
-                                id="txt_password_register" aria-describedby="weightHelp" placeholder="Password">
-                            <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
-                                id="txt_confirmPassword_register" aria-describedby="pwconfimHelp" placeholder="Confirm">
-                        </div>
-                        <div class="d-flex justify-content-center mb-3">
-                            <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
-                                data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary navButton col-lg-3">Registar</button>
-                        </div>
-                        <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <!-- JS File -->
     <script type="module" src="../js/app.js"></script>

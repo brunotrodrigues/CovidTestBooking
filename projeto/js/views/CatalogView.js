@@ -17,9 +17,9 @@ export default class LabView {
         this.btnSort = document.querySelector("#btnSort")
         this.bindSort()
 
-        // Catálogo: adição de lab
-        this.btnAdd = document.querySelector("#btnAdd")
-        this.bindAdd()
+        // // Catálogo: adição de lab
+        // this.btnAdd = document.querySelector("#btnAdd")
+        // this.bindAdd()
 
         // Catálogo: listagem de labs
         this.catalog = document.querySelector("#myCatalog")
@@ -38,20 +38,16 @@ export default class LabView {
         })
     }
 
-    bindAdd() {
-        this.btnAdd.addEventListener('click', () => {
-            location.href = 'html/newBand.html';
-        })
-    }
+    // bindAdd() {
+    //     this.btnAdd.addEventListener('click', () => {
+    //         location.href = 'html/newBand.html';
+    //     })
+    // }
 
     renderCatalog(labs = []) {
         // Gerir a visualização do botão Add
-        this.userController.isLogged() ?
-            this.btnAdd.style.visibility = 'visible' :
-            this.btnAdd.style.visibility = 'hidden';
-
         // Gerir o catálogo
-        let result = '<div class="row row-cols-3">'
+        let result = '<div class="card card-margin">'
         for (const lab of labs) {
             result += this.generateLabCard(lab)
 
@@ -94,9 +90,6 @@ export default class LabView {
             </div>
         </div>
         `
-        if (this.userController.isLogged()) {
-            html += `<button id="${lab.name}" class="btn btn-danger remove">Remove</button>`
-        }
 
         html += `
                 </div>
