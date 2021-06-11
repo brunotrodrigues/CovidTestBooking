@@ -15,6 +15,7 @@
   <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+  <br>
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
@@ -50,7 +51,7 @@
     <div class="container">
       <h1>Bem vindos à Covid Test Booking</h1>
       <h2>Sem Preocupações, Sem Complicações</h2>
-      <a href="#" class="btn-get-started scrollto">Marque Agora</a>
+      <a href="./html/labs.html" class="btn-get-started scrollto">Marque Agora</a>
     </div>
   </section>
   <main id="main">
@@ -248,9 +249,7 @@
                 href="#faq-list-1">Como se transmite?<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
-                <p>
-                  A COVID-19 transmite-se pessoa-a-pessoa por contacto próximo com pessoas infetadas pelo SARS-CoV-2 (transmissão direta), ou através do contacto com superfícies e objetos contaminados (transmissão indireta).
-                </p>
+                <p>A COVID-19 transmite-se pessoa-a-pessoa por contacto próximo com pessoas infetadas pelo SARS-CoV-2 (transmissão direta), ou através do contacto com superfícies e objetos contaminados (transmissão indireta).</p>
               </div>
             </li>
             <li data-aos="fade-up" data-aos-delay="100">
@@ -258,9 +257,7 @@
                 class="collapsed">Qual é o período de incubação?<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-parent=".faq-list">
-                <p>
-                  Atualmente, estima-se que o período de incubação da doença (tempo decorrido desde a exposição ao vírus até ao aparecimento de sintomas) seja entre 1 e 14 dias.
-                </p>
+                <p>Atualmente, estima-se que o período de incubação da doença (tempo decorrido desde a exposição ao vírus até ao aparecimento de sintomas) seja entre 1 e 14 dias.</p>
               </div>
             </li>
             <li data-aos="fade-up" data-aos-delay="200">
@@ -268,9 +265,7 @@
                 class="collapsed">O que é um Contacto Próximo?<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-parent=".faq-list">
-                <p>
-                  Um contacto (próximo) de um caso de COVID-19 é alguém que esteve exposto a um caso confirmado, ou a material biológico de um caso confirmado, dentro do período de transmissibilidade.
-                </p>
+                <p>Um contacto (próximo) de um caso de COVID-19 é alguém que esteve exposto a um caso confirmado, ou a material biológico de um caso confirmado, dentro do período de transmissibilidade.</p>
               </div>
             </li>
             <li data-aos="fade-up" data-aos-delay="300">
@@ -339,20 +334,14 @@
             <div>
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo"
-                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+                  <input type="text" name="name" class="form-control" id="name_contact" placeholder="Nome Completo"/>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="E-mail"
-                    data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
+                  <input type="email" class="form-control" name="email" id="email_contact" placeholder="E-mail"/>
                 </div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required"
-                  data-msg="Please write something for us" placeholder="Mensagem"></textarea>
-                <div class="validate"></div>
+                <textarea class="form-control" name="message" id="message_contact" rows="5" placeholder="Mensagem"></textarea>
               </div>
               <div class="text-center"><a href="#" class="btn btn-primary">Submeter</a>
               </div>

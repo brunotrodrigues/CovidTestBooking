@@ -1,6 +1,7 @@
 import UserView from './views/userView.js'
 import LabView from './views/CatalogView.js'
 import DetailLabView from './views/DetailLabView.js'
+import AdminView from './views/adminView.js'
 
 
 class App {
@@ -8,6 +9,7 @@ class App {
         this.routes = {
             '': [UserView],
             'index': [UserView],
+            'adminUser':[AdminView],
             'labs': [
                 LabView,
                 UserView

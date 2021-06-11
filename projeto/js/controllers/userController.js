@@ -22,18 +22,18 @@ export default class userController{
 
     login(username, password) {
         if (this.users.some(user => user.username === username && user.password === password)) {
-            localStorage.setItem('loggedUser', username)
+            sessionStorage.setItem('loggedUser', username)
         } else {
             throw Error('Login Invalido!');
         }
     }
 
     logout() {
-        localStorage.removeItem('loggedUser')
+        sessionStorage.removeItem('loggedUser')
     }
     
     isLogged() {
-        return localStorage.getItem('loggedUser') ? true : false
+        return sessionStorage.getItem('loggedUser') ? true : false
     }
     
     removeUser(username){
