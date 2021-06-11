@@ -24,6 +24,9 @@ export default class LabView {
         // Catálogo: listagem de labs
         this.catalog = document.querySelector("#myCatalog")
         this.renderCatalog(this.labController.getLabs())
+
+        // Atualiza botões tendo em conta se o user está autenticado ou não
+        this.updateStatusUI();
     }
 
     bindFilter() {
@@ -115,6 +118,23 @@ export default class LabView {
                 this.labController.setCurrentLab(event.target.id)
                 location.href = '../html/detailLab.html';
             })
+        }
+    }
+
+    /**
+     * Função que atualiza a visibilidade dos botões de acordo com a autenticação
+     */
+     updateStatusUI() {
+        if (this.userController.isLogged()) {
+            this.loginButton.style.visibility = 'hidden'
+            this.registerButton.style.visibility = 'hidden'
+            this.logoutButton.style.visibility = 'visible'
+            let loggedUser=localStorage.getItem('loggedUser')
+            document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img  src="https://via.placeholder.com/50"/></a>Bem-vindo ${loggedUser}</p></div>`;
+        } else {
+            this.loginButton.style.visibility = 'visible'
+            this.registerButton.style.visibility = 'visible'
+            this.logoutButton.style.visibility = 'hidden'
         }
     }
 }
