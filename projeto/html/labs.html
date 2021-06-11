@@ -4,60 +4,41 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
     <title>Covid Test Booking</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
     <link href="../img/icon.png" rel="icon">
-
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link href="../css\labs.css" rel="stylesheet">
-
+    <link href="../css/labs.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
-            <a href="index.html" class="logo mr-auto"><img src="../img\LOGO.png" alt="" class="img-fluid"></a>
-
+            <a href="index.html" class="logo mr-auto"><img src="../img/LOGO.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block align-items-center">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#tiposteste">Testes</a></li>
-                    <li><a href="#doctors">Postos</a></li>
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#tiposteste">Testes</a></li>
+                    <li><a href="../html/labs.html">Centros</a></li>
                 </ul>
-            </nav><!-- .nav-menu -->
-
+            </nav>
             <a href="#loginModal" class="appointment-btn scrollto" data-toggle="modal" id="btnLogin">Login</a>
-
             <a href="#registerModal" class="appointment-btn scrollto" data-toggle="modal" id="btnRegister">Registar</a>
-
             <a href="#" class="appointment-btn scrollto" style="visibility: hidden;" id="btnLogout">Logout</a>
-
-            <button type="button" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</button>
         </div>
-    </header><!-- End Header -->
-
-
-    
+    </header>    
     <br>
     <div class="container-fluid">
         <div class="row" id="fila">
             <div class="col" id="left">
                 <form class="form-inline">
-                    <div class="form-group">
+                    <div class="form-group ml-3">
                         <label for="sltType">Tipo</label>
                         <select class="form-control m-2" name="" id="sltType">
                             <option value="">Todos</option>
@@ -70,14 +51,12 @@
                         <label for="txtLab">Nome:</label>
                         <input id="txtLab" type="text" class="form-control m-2" />
                     </div>
-                    <div>
+                    <div class="form-group ml-3">
                         <button id="btnFilter" type="button" class="btn btn-primary">Filtro</button>
                         <button id="btnSort" type="button" class="btn btn-primary m-2">Ordenar</button>
                     </div>
                 </form>
-
                 <div class="">
-                    <!-- CATÁLOGO: EXIBIÇÃO DAS BANDAS (VAZIO INICIALMENTE) -->
                     <div class="row">
                         <div class="col">
                             <hr class="my-2" />
@@ -85,22 +64,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            
             <div class="col" id="right">
                 <div id="map"></div>
             </div>
-
         </div>
     </div>
-
-
-  
-
     <script>
         let map;
-
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: 41.1556100, lng: -8.6309900 },
@@ -109,19 +80,12 @@
             });
         }
     </script>
-
-
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvb3VJtmsMAqTQR1EU3xWY2Z35iSBEC1U&callback=initMap&libraries=&v=weekly"
         async>
         </script>
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
+    </main>
     <footer id="footer">
-
         <div class="container d-md-flex py-4">
             <div class="text-center">
                 <div class="copyright">
@@ -129,14 +93,8 @@
                 </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
-
-
-    <!-- JS File -->
+    </footer>
     <script type="module" src="../js/app.js"></script>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -147,5 +105,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
