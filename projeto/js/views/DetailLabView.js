@@ -17,11 +17,23 @@ export default class DetailLabView {
         this.confirmMessage = document.querySelector('#confirmMessage')
         this.frmConfirm = document.querySelector('#frmConfirm');
 
+        this.schedule = document.querySelector("#schedule")
+        this.renderSchedule(this.labController.getLabs())
 
 
 
 
         this.fillLabData()
+    }
+
+    getCurrentDate(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = dd + '/' + mm + '/' + yyyy;
+        document.write(today);
     }
 
 
@@ -36,19 +48,63 @@ export default class DetailLabView {
         this.labPhoto.src = currentLab.photo
     }
 
-    // generateSchedule(lab) {
-    //     let html = `
+    renderSchedule() {
+        const currentLab = this.labController.getCurrentLab()
+
+        this.labSchedule = currentLab.schedule
         
-    //     `
+        this.labSchedule = this.labSchedule.split(" ")
+        console.log(this.labSchedule)
+        // Gerir o schedule
+        let result = '<div class="row text-center mx-0">'
+
+        let horaInicial = parseInt(this.labSchedule[0])
+        let horaFinal = parseInt(this.labSchedule[1]) - 1
+        let i;
+        for (i = horaInicial; i < horaFinal; i++) {
+            result += this.generateTimeCard(i)
+
+        }
+        this.schedule.innerHTML = result
+
+
+    }
+
+    generateTimeCard(i) {
+        let html = `
+        <div class="row text-center mx-0">
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:00</div>
+            </div>
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:10</div>
+            </div>
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:20</div>
+            </div>
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:30</div>
+            </div>
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:40</div>
+            </div>
+            <div class="col-md-2 col-4 my-1 px-2">
+                <div class="cell py-1">${i}:50</div>
+            </div>
+        </div>
+        `
+
+        return html
+    }
 
     bindconfirmForm() {
         this.frmConfirm.addEventListener('submit', event => {
             event.preventDefault();
-                this.displayMessage('confirm', 'Marcação efetuada!', 'success');
-                // Espera 1 seg. antes de fazer refresh à pagina
-                // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
-                setTimeout(() => { location.reload() }, 1000);
-            });
+            this.displayMessage('confirm', 'Marcação efetuada!', 'success');
+            // Espera 1 seg. antes de fazer refresh à pagina
+            // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
+            setTimeout(() => { location.reload() }, 1000);
+        });
     }
 
 
