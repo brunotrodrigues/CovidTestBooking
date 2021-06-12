@@ -33,7 +33,7 @@ export default class DetailLabView {
         var yyyy = today.getFullYear();
 
         today = dd + '/' + mm + '/' + yyyy;
-        document.write(today);
+        return today
     }
 
 
@@ -59,7 +59,7 @@ export default class DetailLabView {
         let result = '<div class="row text-center mx-0">'
 
         let horaInicial = parseInt(this.labSchedule[0])
-        let horaFinal = parseInt(this.labSchedule[1]) - 1
+        let horaFinal = parseInt(this.labSchedule[1]) 
         let i;
         for (i = horaInicial; i < horaFinal; i++) {
             result += this.generateTimeCard(i)
