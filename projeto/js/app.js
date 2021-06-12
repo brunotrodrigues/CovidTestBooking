@@ -2,6 +2,7 @@ import UserView from './views/userView.js'
 import LabView from './views/CatalogView.js'
 import DetailLabView from './views/DetailLabView.js'
 import AdminView from './views/adminView.js'
+import ProfileView from './views/profileView.js'
 
 
 class App {
@@ -16,6 +17,10 @@ class App {
             ],
             'detailLab': [
                 DetailLabView,
+                UserView
+            ],
+            'profile': [
+                ProfileView,
                 UserView
             ],
 
