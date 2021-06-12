@@ -1,7 +1,7 @@
 export default class MessageModel{
-    constructor(name, email, message){
+    constructor(name, email, comment){
         this.name = name
         this.email = email
-        this.comment = this.comment
+        this.comment = comment
     }
 }
