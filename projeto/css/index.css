@@ -21,9 +21,6 @@ a:hover {
   border-radius: 99px;
     width: 100px;
 }
-
-/* Top Bar */
-
 #topbar {
   background: #fff;
   height: 40px;
@@ -561,8 +558,9 @@ section {
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.services .icon-box h4 a:hover {
   color: #2c4964;
+  
 }
 
 .services .icon-box p {
@@ -573,7 +571,7 @@ section {
 
 .services .icon-box:hover {
   background: #1977cc;
-  border-color: #1977cc;
+  color: white;
 }
 
 /* tiposteste */

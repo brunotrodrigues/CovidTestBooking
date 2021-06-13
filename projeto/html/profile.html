@@ -23,162 +23,67 @@
 </head>
 
 <body>
-  <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="">ajudacliente@covidtesting.com</a>
+        <i class="icofont-envelope"></i>ajudacliente@covidtesting.com
         <i class="icofont-phone"></i> +351 914 358 147
         <i class="icofont-google-map"></i> 981, R. Dom Sancho I, PT
       </div>
     </div>
   </div>
-
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo mr-auto"><img src="..\img\LOGO.png" alt="" class="img-fluid"></a>
+      <a href="../index.html" class="logo mr-auto"><img src="..\img\LOGO.png" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block align-items-center">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#tiposteste">Testes</a></li>
-          <li><a href="#">Postos</a></li>
-          <li><a href="#contacts">Contactos</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">Sobre</a></li>
+          <li><a href="../index.html#services">Serviços</a></li>
+          <li><a href="../index.html#tiposteste">Testes</a></li>
+          <li><a href="../html/labs.html">Centros</a></li>
+          <li><a href="/index.html#contacts">Contactos</a></li>
         </ul>
-      </nav><!-- .nav-menu -->
-
+      </nav>
       <a href="#loginModal" class="btn btn-primary ml-5" data-toggle="modal" id="btnLogin">Login</a>
-
       <a href="#registerModal" class="btn btn-primary ml-3" data-toggle="modal" id="btnRegister">Registar</a>
-
       <a href="#" class="appointment-btn scrollto" style="visibility: hidden;" id="btnLogout">Logout</a>
-
     </div>
-  </header><!-- End Header -->
-
+  </header>
   <br><br><br><br><br><br><br><br>
-  <div>
-    <div class="container">
-      <div class="row gutters">
-        <!-- <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="account-settings">
-                <div class="user-profile">
-                  <div class="user-avatar">
-                    <img src="img\test_deteçao.jpg" alt="" class="img-fluid">
-                    <input type="text" class="form-control" id="imgUrl" placeholder="Enter image URL">
-                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Guardar imagem</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-
-        <!-- <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="row gutters">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <h6 class="mb-2 text-primary">Personal Details</h6>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" class="form-control" id="text_username" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" class="form-control" id="txt_name" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="txt_email" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="phone" class="form-control" id="txt_phone" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="row gutters">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="address">Morada</label>
-                    <input type="text" class="form-control" id="txt_address" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="gender">Genero</label>
-                    <input type="name" class="form-control" id="ciTy" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="sTate">Password</label>
-                    <input type="text" class="form-control" id="sTate" placeholder="">
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label for="zIp">Idade</label>
-                    <input type="text" class="form-control" id="zIp" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="row gutters">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <div class="text-right">
-                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
-                    <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </div>
-
   <form id="frmRegister">
     <div class="form-group d-flex justify-content-center">
       <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Editar perfil</h5>
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Username:</label>
       <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_edit"
-        aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
+        aria-describedby="usernameHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Nome Completo:</label>
       <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_edit"
-        aria-describedby="fullnameHelp" placeholder="Nome Completo">
+        aria-describedby="fullnameHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">E-mail:</label>
       <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_edit"
-        aria-describedby="emailHelp" placeholder="E-mail">
+        aria-describedby="emailHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Morada:</label>
       <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_edit"
-        aria-describedby="addressHelp" placeholder="Morada">
+        aria-describedby="addressHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Telefone:</label>
       <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_eit"
-        aria-describedby="phoneHelp" placeholder="Telefone">
+        aria-describedby="phoneHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Genero:</label>
       <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gender_edit">
         <option value="" disabled selected>Escolha uma opção</option>
         <option value="male">Masculino</option>
@@ -186,12 +91,15 @@
       </select>
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Data de Nascimento:</label>
       <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
         class="form-control col-lg-6 mt-2 modalField" id="date_birthday_edit">
     </div>
     <div class="form-group d-flex justify-content-center">
+      <label for="">Password:</label>
       <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_edit"
-        aria-describedby="weightHelp" placeholder="Password">
+        aria-describedby="weightHelp">
+        <label for="">Confirmar Password:</label>
       <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
         id="txt_confirmPassword_register" aria-describedby="pwconfimHelp" placeholder="Confirm">
     </div>
@@ -201,10 +109,7 @@
       <button type="submit" class="btn btn-primary navButton col-lg-3">Editar</button>
     </div>
     <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
-  </form>
-
-  <!-- ======= Footer ======= -->
-  
+  </form>  
   <footer id="footer">
     <div class="container d-md-flex py-4">
       <div class="text-center">
@@ -213,12 +118,8 @@
         </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
-
-
+  </footer>
   <script type="module" src="..\js\app.js"></script>
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
