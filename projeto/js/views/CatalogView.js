@@ -70,6 +70,25 @@ export default class LabView {
         this.bindAddSeeMoreEvent()
 
     }
+    
+    mapMarkers(lab) {
+        let map;
+        function initMap() {
+            this.labCoordinates = { lat: lab.latitude, lng: lab.longitude };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 41.1556100, lng: -8.6309900 },
+                zoom: 14,
+                mapTypeId: "hybrid"
+                });
+                new google.maps.Marker({
+                position: this.labCoordinates,
+                map,
+                title: lab.name,
+            });
+      
+    }
+    }
+
 
     generateLabCard(lab) {
         let html = `

@@ -531,10 +531,6 @@ button:focus {
     padding: 10px !important
 }
 
-.datepicker-dropdown:after {
-    border-bottom: 6px solid #000;
-    margin-bottom: -100vh;
-}
 
 thead tr:nth-child(3) th {
     color: #000 !important;
