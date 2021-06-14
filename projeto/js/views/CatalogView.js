@@ -95,6 +95,12 @@ export default class LabView {
         <div class="card card-margin">
             <div class="card-header no-border">
                 <h5 class="card-title">${lab.name}</h5>
+                <div>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart"></span>
+                    </a>
+                </div>
+                
             </div>
             <div class="card-body pt-0">
                 <div class="widget-49">

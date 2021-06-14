@@ -639,3 +639,7 @@ thead tr:nth-child(3) th {
 #contenct{
   margin-top: 100px;
 }
+
+#comments {
+  background-color: #f1f7fd;
+}
