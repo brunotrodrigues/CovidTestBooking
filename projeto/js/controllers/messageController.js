@@ -6,5 +6,6 @@ export default class MessageController{
     }
     register() {
         
+        localStorage.setItem('message', JSON.stringify(this.message))
     }
 }
