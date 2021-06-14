@@ -14,6 +14,7 @@ export default class DetailLabView {
         this.labPhoto = document.querySelector('#labPhoto')
         this.labPrice = document.querySelector('#labPrice')
         this.labMorada = document.querySelector('#labMorada')
+        this.labschedule = document.querySelector('#labschedule')
         this.labSchedule = document.querySelector('#labschedule')
         this.confirmMessage = document.querySelector('#confirmMessage')
         this.frmConfirm = document.querySelector('#frmConfirm');
@@ -52,7 +53,7 @@ export default class DetailLabView {
         this.labDescription.innerHTML = currentLab.description
         this.labPrice.innerHTML = currentLab.price
         this.labMorada.innerHTML = currentLab.morada
-        this.labSchedule.innerHTML = currentLab.schedule
+        this.labschedule.innerHTML = currentLab.schedule
         this.labPhoto.src = currentLab.photo
     }
 
@@ -61,8 +62,7 @@ export default class DetailLabView {
 
         this.labSchedule = currentLab.schedule
         
-        this.labSchedule = this.labSchedule.split(" ")
-        console.log(this.labSchedule)
+        this.labSchedule = this.labSchedule.split("às")
         // Gerir o schedule
         let result = '<div class="row text-center mx-0">'
 

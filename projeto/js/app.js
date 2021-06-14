@@ -59,14 +59,15 @@ class App {
                 description: 'Hospital CUF Porto',
                 photo: 'https://www.josedemello.pt/wp-content/uploads/2017/01/hospital-cuf-porto.png',
                 phone: "220039000",
-                // longitude: ,
-                // latitude: ,
+                longitude: "-8.6690792",
+                latitude: "41.1759538",
                 type: 'antigénio',
-                schedule: "09 18",
+                schedule: "09 às 18",
                 price: "17€",
                 // comments: ,
                 // likes: ,
-                morada: "Estrada da Circunvalação, 14341, 4100-180 Porto"
+                morada: "Estrada da Circunvalação, 14341, 4100-180 Porto",
+                views : "3"
             },
             {
                 id: 2,
@@ -75,13 +76,14 @@ class App {
                 photo: 'https://lh5.googleusercontent.com/p/AF1QipNKTDR2_WPCrQekSteNJDiZtfm5GyPamkvfXXxF=w600-h650-p-k-no',
                 description: 'Clínica do Bonfim',
                 phone: "220125001 | 222401401",
-                // longitude: ,
-                // latitude: ,
-                schedule: "09 16",
+                longitude: "-8.6167",
+                latitude: "41.15",
+                schedule: "09 às 16",
                 price: "17€",
                 // comments: ,
                 // likes: ,
-                morada: "Av. Fernão de Magalhães 412 R/Ch 4349-008 Porto"
+                morada: "Av. Fernão de Magalhães 412 R/Ch 4349-008 Porto",
+                views: "5"
             },
             {
                 id: 3,
@@ -90,13 +92,14 @@ class App {
                 photo: 'https://www.unilabs.pt/sites/default/files/styles/google_my_business_site_400x266/public/2020-09/Bolama.jpg?h=d08f423e&itok=XkAHt0o1',
                 description: 'Posto de Colheita Covid-19 Porto - Paranhos',
                 phone: "220125001 | 222401401",
-                // longitude: ,
-                // latitude: ,
-                schedule: "10 20",
+                longitude: "-8.603900",
+                latitude: "41.165400",
+                schedule: "10 às 20",
                 price: "20€",
                 // comments: ,
                 // likes: ,
-                morada: "Rua do Bolama, 233, 4200-139 Porto"
+                morada: "Rua do Bolama, 233, 4200-139 Porto",
+                views: "2"
             },
             {
                 id: 4,
@@ -105,13 +108,14 @@ class App {
                 photo: 'https://www.porto.pt/_next/image?url=https%3A%2F%2Fportopontocms-live-f03d42215130439cbde1-5c14293.divio-media.org%2Foriginal_images%2Fmno_centro_rastreio_01.JPG&w=1460&q=85',
                 description: 'Posto de Colheita Covid-19 Porto',
                 phone: "220125001",
-                // longitude: ,
-                // latitude: ,
-                schedule: "09 18",
+                longitude: "-8.671870",
+                latitude: "41.174390",
+                schedule: "09 às 18",
                 price: "20€",
                 // comments: ,
                 // likes: ,
-                morada: "Queimódromo Porto - Estrada da Circunvalação Entrada Aeródromo, 4100-078 Porto"
+                morada: "Queimódromo Porto - Estrada da Circunvalação Entrada Aeródromo, 4100-078 Porto",
+                views: "10"
             },
             {
                 id: 5,
@@ -122,11 +126,12 @@ class App {
                 phone: "220125001 | 222401401",
                 // longitude: ,
                 // latitude: ,
-                schedule: "09 18",
+                schedule: "09 às 18",
                 price: "20€",
                 // comments: ,
                 // likes: ,
-                morada: "Rua do Amial, nº 682, 4200-062 Paranhos"
+                morada: "Rua do Amial, nº 682, 4200-062 Paranhos",
+                views: "1"
             },
             {
                 id: 6,
@@ -135,13 +140,14 @@ class App {
                 photo: 'https://lh3.googleusercontent.com/proxy/qQYpuFZCkRObOeNWYc1CSjaKii2sMzb4-IHm47FWnCnO5N06CAPZ1PzSop_4BwqkSiUamfpUmGaN4LaqRMFpECx4stkkVdptcVF9VkD4RHZmM8vzKf13TUtCCqRrmzb62EcE',
                 description: 'LabMED Saúde Porto',
                 phone: "220125001 | 222401401",
-                // longitude: ,
-                // latitude: ,
-                schedule: "09 18",
+                longitude: "-8.614060",
+                latitude: "41.178010",
+                schedule: "09 às 18",
                 price: "20€",
                 // comments: ,
                 // likes: ,
-                morada: "Rua da Boavista, nº 668 , 4050-105 Cedofeita"
+                morada: "Rua da Boavista, nº 668 , 4050-105 Cedofeita",
+                views: "5"
             },
             {
                 id: 7,
@@ -150,13 +156,14 @@ class App {
                 photo: 'https://www.synlab.pt/Media/Imagens/SYNLAB.PT/N05_20201012_THUMB_720px.jpg',
                 description: 'Synlab Porto',
                 phone: "222001507 | 227860743 - 935465241",
-                // longitude: ,
-                // latitude: ,
-                schedule: "09 18",
+                longitude: "-8.612350",
+                latitude: "41.147919",
+                schedule: "09 às 18",
                 price: "20€",
                 // comments: ,
                 // likes: ,
-                morada: "Praça D.ª Filipa de Lencastre, 22, Sala 55, 4050-259 Porto"
+                morada: "Praça D.ª Filipa de Lencastre, 22, Sala 55, 4050-259 Porto",
+                views: "4"
             },
         ];
 

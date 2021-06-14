@@ -7,9 +7,9 @@ export default class labController {
 
     }
 
-    create(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada) {
+    create(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada, views) {
         if (!this.labs.some(lab => lab.name === name)) {
-            this.labs.push(new LabModel(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada));
+            this.labs.push(new LabModel(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada, views));
             localStorage.setItem('labs', JSON.stringify(this.labs))
         } else {
             throw Error(`Lab with name "${name}" already exists!`);

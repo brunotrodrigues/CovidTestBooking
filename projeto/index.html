@@ -63,10 +63,10 @@
             <div class="content">
               <h3>Porquê nós?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad
-                corporis.
+                Somos uma empresa para os clientes, o nosso foco é apenas o seu bem estar
+                e na sua conservação de tempo, tornando o processo chato e demorado mais
+                simples e eficaz. Na CTB apenas queremos o melhor para si e para a sua
+                saúde, criando assim a melhor experiência para os nossos clientes.
               </p>
               <div class="text-center">
                 <a href="#about" class="more-btn">Saber mais<i class="bx bx-chevron-right"></i></a>
@@ -113,60 +113,30 @@
         </div>
       </div>
     </section><!-- End Why Us Section -->
-    <!-- ======= About Section ======= -->
-    <!-- <section id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-              data-autoplay="true"></a>
-          </div>
-          <div
-            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus
-              laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla
-              tenetur. Suscipit aut voluptate.</p>
-            <div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                occaecati cupiditate non provident</p>
-            </div>
-            <div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>End About Section -->
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
         <div class="section-title">
           <h2>Serviços</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <p>Veja aqui os serviços disponibilizados pela Covid Test Booking.</p>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <h4><a href="">Teste Deteção</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p>Teste de diagnóstico da COVID-19 nas vias respiratórias</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <h4><a href="">Teste Antigénio</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <p>Ou teste rápido permite a obtenção dos resultados mais rapidamente</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <h4><a href="">Teste Serológico</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <p>Teste que é realizado através de uma pequena amostra de sangue</p>
             </div>
           </div>
         </div>
@@ -290,14 +260,21 @@
     <section id="map"></section>
     <script>
       let map;
+
       function initMap() {
-        console.log("in")
+        const esmad = { lat: 41.366178, lng: -8.7418871 };
         map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 41.1496100, lng: -8.6109900 },
-          zoom: 12,
+          center: esmad,
+          zoom: 15,
         });
-        console.log(map)
+        new google.maps.Marker({
+          position: esmad,
+          map,
+          title: "ESMAD",
+        });
+
       }
+      
     </script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
