@@ -18,11 +18,6 @@ export default class adminView {
         this.registerPassword2 = document.querySelector('#txt_confirmPassword_register');
         this.registerMessage = document.querySelector('#registerMessage')
 
-
-
-
-
-
         this.EditRegister = document.querySelector('#frmEdit');
         this.EditUsername = document.querySelector('#txt_username_register_edit');
         this.EditFullname = document.querySelector('#txt_fullname_register_edit');
@@ -36,17 +31,10 @@ export default class adminView {
         this.EditSubmitModal = document.querySelector('#submitModal');
 
 
-
-
-
-
-
-
-
-
         this.bindRegisterForm();
         this.bindEditForm()
         // Gestão dos botões da navbar
+        
         this.loginButton = document.querySelector('#btnLogin');
         this.registerButton = document.querySelector('#btnRegister');
         this.logoutButton = document.querySelector('#btnLogout');
@@ -94,11 +82,6 @@ export default class adminView {
             } catch (err) {
                 this.displayMessage('Edit', err, 'danger');
             }
-
-
-
-
-            
         })
     }
 
