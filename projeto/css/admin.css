@@ -12,9 +12,9 @@ th, td{
   border: 1px solid black;
 }
 
-li {
+/* li {
   list-style-type: none;
-}
+} */
 
 .nav-link:hover{
   text-decoration: underline;
