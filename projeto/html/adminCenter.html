@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/admin.css">
+  <title>CTB</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="/img/LOGO.png" class="navbar-brand" height="50px" href="#" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../html/adminUser.html">Utlizadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">Gamificação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../html/adminCenter.html">Centros</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary ml-5" data-toggle="modal" id="btnLogin">Login</a>
+          <a href="#" class="btn btn-primary ml-3" data-toggle="modal" id="btnRegister">Registar</a>
+          <div class="container1"></div>
+          <a href="#" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</a>
+        </div>
+      </nav>
+    </div>
+    <table id="tabelaUser" class="consult">
+      <th>Name</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th>Phone</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Type</th>
+      <th>Schedule</th>
+      <th>Price</th>
+      <th>Comments</th>
+      <th>Likes</th>
+      <th>Morada</th>
+    </table>
+  </div>
+  <a href="#registerModal" class="btn btn-primary ml-3" data-toggle="modal" id="btnRegister">Registar</a>
+
+<!--MODAL editar-->
+  <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex justify-content-center col-lg-11">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="frmEdit">
+            <div class="form-group d-flex justify-content-center">
+              <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Editar</h5>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input disabled type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register_edit"
+                aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register_edit"
+                aria-describedby="fullnameHelp" placeholder="Nome Completo">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register_edit"
+                aria-describedby="emailHelp" placeholder="E-mail">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register_edit"
+                aria-describedby="addressHelp" placeholder="Morada">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register_edit"
+                aria-describedby="phoneHelp" placeholder="Telefone">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gender_register_edit">
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+              </select>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
+                class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register_edit">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_register_edit"
+                aria-describedby="weightHelp" placeholder="Password">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
+                id="txt_confirmPassword_register_edit" aria-describedby="pwconfimHelp" placeholder="Confirm">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
+                data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary navButton col-lg-3" id="submitModal  ">Editar</button>
+            </div>
+            <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL REGISTAR-->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex justify-content-center col-lg-11">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="frmRegister">
+            <div class="form-group d-flex justify-content-center">
+              <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Registo</h5>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_username_register"
+                aria-describedby="usernameHelp" placeholder="Nome de Utilizador">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_fullname_register"
+                aria-describedby="fullnameHelp" placeholder="Nome Completo">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="email" class="form-control col-lg-6 mt-2 modalField" id="txt_email_register"
+                aria-describedby="emailHelp" placeholder="E-mail">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" class="form-control col-lg-6 mt-2 modalField" id="txt_address_register"
+                aria-describedby="addressHelp" placeholder="Morada">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="tel" class="form-control col-lg-6 mt-2 modalField" id="txt_phone_register"
+                aria-describedby="phoneHelp" placeholder="Telefone">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <select type="select" class="form-control col-lg-6 mt-2 mr-1 modalField" id="txt_gender_register">
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+              </select>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
+                class="form-control col-lg-6 mt-2 modalField" id="date_birthday_register">
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField" id="txt_password_register"
+                aria-describedby="weightHelp" placeholder="Password">
+              <input type="password" class="form-control col-lg-3 mt-3 mr-1 modalField"
+                id="txt_confirmPassword_register" aria-describedby="pwconfimHelp" placeholder="Confirm">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <button type="button" class="btn btn-secondary navButton mr-1 col-lg-3 "
+                data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary navButton col-lg-3">Registar</button>
+            </div>
+            <div id="registerMessage" class="col-lg-12 d-flex justify-content-center"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script type="module" src="..\js\app.js"></script>
+
+</html>

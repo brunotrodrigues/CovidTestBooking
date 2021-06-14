@@ -180,9 +180,6 @@ export default class adminView {
     }
 
     updateStatusUI() {
-
-
-
         if (this.userController.isLogged()) {
 
             this.loginButton.style.visibility = 'hidden'
