@@ -7,6 +7,19 @@ export default class DetailLabView {
         this.labController = new labController()
         this.userController = new UserController()
 
+        this.dataTeste=document.querySelector("#dataTeste")
+        let date=new Date()
+        console.log(date.getUTCDate())
+        let year=date.getUTCFullYear()
+        let day=date.getUTCDate()
+        let month=date.getUTCMonth()
+        month++
+        console.log(year,day,month)
+        let min=year+"-"+month+"-"+day
+        let max=year+"-"+12+"-"+31
+        this.dataTeste.setAttribute('min',min)
+        this.dataTeste.setAttribute('max',max)
+
         // Gestão dos detalhes do lab
         this.labName = document.querySelector('#labName')
         this.labType = document.querySelector('#labType')
@@ -18,9 +31,9 @@ export default class DetailLabView {
         this.labSchedule = document.querySelector('#labschedule')
         this.confirmMessage = document.querySelector('#confirmMessage')
         this.frmConfirm = document.querySelector('#frmConfirm');
-
+        this.createSubmitModal=document.querySelector('#btnSim')
         this.schedule = document.querySelector("#schedule")
-        this.renderSchedule(this.labController.getLabs())
+        //this.renderSchedule(this.labController.getLabs())
 
         this.fillLabData()
 
@@ -33,6 +46,12 @@ export default class DetailLabView {
 
         // Atualiza botões tendo em conta se o user está autenticado ou não
         this.updateStatusUI();
+
+        this.bindconfirmForm();
+
+        
+        
+        
     }
 
     getCurrentDate(){
@@ -109,6 +128,7 @@ export default class DetailLabView {
         this.frmConfirm.addEventListener('submit', event => {
             event.preventDefault();
             this.displayMessage('confirm', 'Marcação efetuada!', 'success');
+            
             // Espera 1 seg. antes de fazer refresh à pagina
             // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
             setTimeout(() => { location.reload() }, 1000);

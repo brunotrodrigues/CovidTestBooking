@@ -17,14 +17,13 @@ class App {
             ],
             'detailLab': [
                 DetailLabView,
-                UserView
+                //UserView
             ],
             'profile': [
                 ProfileView,
                 UserView
             ],
 
-            // 'profile': [ProfileView]
         };
 
         // import dummy data for testing purposes
