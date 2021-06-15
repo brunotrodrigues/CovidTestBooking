@@ -1,8 +1,10 @@
 import userController from '../controllers/userController.js'
+import labController from '../controllers/LabController.js';
 
 export default class adminView {
     constructor() {
         this.userController = new userController();
+        this.labController = new labController()
         this.list()
 
         // Gestão do form de registo
@@ -31,10 +33,45 @@ export default class adminView {
         this.EditSubmitModal = document.querySelector('#submitModal');
 
 
+
+        this.centerTable = document.querySelector("#tabelaCentros")
+        this.centerName = document.querySelector('#txt_name_register_center')
+        this.Centerdescripion = document.querySelector("#txt_description_register_center")
+        this.centerLongitude = document.querySelector("#txt_lon_register_center")
+        this.centerLatitude = document.querySelector("#txt_lat_register_center")
+        this.centerType = document.querySelector("#txt_type_register_center")
+        this.centerSchedule = document.querySelector("#txt_schedule_register_center")
+        this.centerPrice = document.querySelector("#txt_price_register_center")
+        this.centerAddress = document.querySelector("#txt_address_register_center")
+        this.centerPhone = document.querySelector("#txt_phone_register_center")
+        this.frmRegisterCenter = document.querySelector("#frmRegister1")
+
+
+
+
+
+        this.centerNameEdit = document.querySelector('#txt_name_edit_center')
+        this.CenterdescripionEdit = document.querySelector("#txt_description_edit_center")
+        this.centerLongitudeEdit = document.querySelector("#txt_lon_edit_center")
+        this.centerLatitudeEdit = document.querySelector("#txt_lat_edit_center")
+        this.centerTypeEdit = document.querySelector("#txt_type_edit_center")
+        this.centerScheduleEdit = document.querySelector("#txt_schedule_edit_center")
+        this.centerPriceEdit = document.querySelector("#txt_price_edit_center")
+        this.centerAddressEdit = document.querySelector("#txt_address_edit_center")
+        this.centerPhoneEdit = document.querySelector("#txt_phone_edit_center")
+        this.frmEditCenterEdit = document.querySelector("#frmEditCenter")
+
+
+
+
+
+
+
+
         this.bindRegisterForm();
         this.bindEditForm()
         // Gestão dos botões da navbar
-        
+
         this.loginButton = document.querySelector('#btnLogin');
         this.registerButton = document.querySelector('#btnRegister');
         this.logoutButton = document.querySelector('#btnLogout');
@@ -44,12 +81,86 @@ export default class adminView {
 
         // Atualiza botões tendo em conta se o user está autenticado ou não
         this.updateStatusUI();
+        this.bindRegisterCenter()
+        this.loadCenters()
+        this.bindEditcenter()
     }
 
     /**
      * Função que define um listener para o botão de registo
      */
+    bindEditcenter() {
+        this.frmEditCenterEdit.addEventListener('submit', event => {
+            let modifyLab = this.labController.getAll().filter(lab => lab.name == this.centerNameEdit.value)[0]
+            let update = {
+                name: this.centerNameEdit.value,
+                description: this.CenterdescripionEdit.value,
+                photo: '',
+                phone: this.centerPhoneEdit.value,
+                longitude: this.centerLongitudeEdit.value,
+                latitude: this.centerLatitudeEdit.value,
+                type: this.centerTypeEdit.value,
+                schedule: this.centerScheduleEdit.value,
+                price: this.centerPriceEdit.value,
+                morada: this.centerAddressEdit.value
 
+            }
+            console.log(update)
+            this.labController.updateLab(update);
+            setTimeout(() => { location.reload() }, 1000);
+
+        })
+
+    }
+    loadCenters() {
+
+        this.labController.getAll().forEach(center => {
+            let labName
+            let string = "<tr>"
+            Object.entries(center).forEach(([key, value]) => {
+                string += `<td>${value}</td>`
+                if (key == "name") {
+                    labName = value
+                }
+
+
+            })
+            string += `<td><input type='button' value='Delete' id="${labName}" class="deleteCenterBtn"/><br><a href="#EditModalCenter" class="btn btn-primary ml-3 editCenterBtn" data-toggle="modal" id="${labName}">Editar</a></td>`
+            string += "</tr>"
+            this.centerTable.innerHTML += string
+
+
+
+            const btns = document.querySelectorAll(".deleteCenterBtn")
+            for (const btn of btns) {
+                btn.addEventListener("click", () => {
+                    const name = btn.id
+                    console.log(name)
+                    this.labController.remove(name)
+                    setTimeout(() => { location.reload() }, 1000);
+                })
+            }
+            const btnsEdit = document.querySelectorAll(".editCenterBtn")
+            for (const btn of btnsEdit) {
+                btn.addEventListener("click", () => {
+                    const name = btn.id
+                    let center = this.labController.getAll().filter(lab => lab.name == name)[0]
+
+                    this.centerNameEdit.value = center.name
+                    this.CenterdescripionEdit.value = center.description
+                    this.centerLongitudeEdit.value = center.longitude
+                    this.centerLatitudeEdit.value = center.latitude
+                    this.centerTypeEdit.value = center.type
+                    this.centerScheduleEdit.value = center.schedule
+                    this.centerPriceEdit.value = center.price
+                    this.centerAddressEdit.value = center.morada
+                    this.centerPhoneEdit.value = center.phone
+                })
+            }
+
+
+        })
+    }
     bindEditForm() {
         this.EditRegister.addEventListener('submit', event => {
             event.preventDefault()
@@ -74,7 +185,7 @@ export default class adminView {
                     type: modifyUser.type
                 }
                 console.log("edit")
-                this.userController.updateUser(update);
+                this.userController.updateUser(update, true);
                 this.displayMessage('Edit', 'Utilizador Editado com sucesso!', 'success');
                 // Espera 1 seg. antes de fazer refresh à pagina
                 // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
@@ -85,9 +196,30 @@ export default class adminView {
         })
     }
 
+    bindRegisterCenter() {
+        this.frmRegisterCenter.addEventListener('submit', event => {
 
+            event.preventDefault();
+
+
+
+
+            this.labController.create(this.centerName.value, this.Centerdescripion.value, "", this.centerPhone.value, this.centerLongitude.value, this.centerLatitude.value, this.centerType.value, this.centerSchedule.value, this.centerPrice.value, this.centerAddress.value);
+            this.displayMessage('register', 'Centro registado com sucesso', 'success');
+            // Espera 1 seg. antes de fazer refresh à pagina
+            // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
+            setTimeout(() => { location.reload() }, 1000);
+            // } catch (err) {
+            //     this.displayMessage('register', err, 'danger');
+            // }
+
+
+
+        })
+    }
     bindRegisterForm() {
         this.frmRegister.addEventListener('submit', event => {
+            console.log("aqui")
             event.preventDefault();
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {

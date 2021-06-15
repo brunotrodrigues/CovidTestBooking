@@ -20,12 +20,21 @@ export default class userController {
         }
     }
 
-    updateUser(Edituser) {
+    updateUser(Edituser, adm) {
         //vallidações no campos se vazio
         if (true) {
             
-            localStorage.setItem('users',JSON.stringify(this.users.map(user=>user.username==Edituser.username?Edituser:user)))
-            
+            if (Edituser.username != sessionStorage.getItem('loggedUser')) {
+                //usernameAlterado, validar se esse username existe
+                if (!this.users.some(user => Edituser.username == sessionStorage.getItem('loggedUser'))) {
+                    localStorage.setItem('users', JSON.stringify(this.users.map(user => user.username == sessionStorage.getItem('loggedUser') ? Edituser : user)))
+
+                } else { alert('Username em uso, retorne para o original ou tente outro') }
+
+            } else {
+                localStorage.setItem('users', JSON.stringify(this.users.map(user => user.username == Edituser.username ? Edituser : user)))
+            }
+
 
         } else {
             throw Error('Editar Inválido')
@@ -58,8 +67,6 @@ export default class userController {
             location.reload()
         }
     }
-    editUser(username) {
 
-    }
 }
 

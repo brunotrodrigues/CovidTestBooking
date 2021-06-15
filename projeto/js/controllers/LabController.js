@@ -7,9 +7,15 @@ export default class labController {
 
     }
 
-    create(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada, views) {
+    updateLab(Editcenter){
+        localStorage.setItem('labs', JSON.stringify(this.labs.map(center => center.name == Editcenter.name ? Editcenter : center)))
+    }
+    getAll(){
+        return this.labs
+    }
+    create(name, description, photo, phone, longitude, latitude, type, schedule, price, morada) {
         if (!this.labs.some(lab => lab.name === name)) {
-            this.labs.push(new LabModel(name, description, photo, phone, longitude, latitude, type, schedule, price, comments, likes, morada, views));
+            this.labs.push(new LabModel(name, description, photo, phone, longitude, latitude, type, schedule, price, morada));
             localStorage.setItem('labs', JSON.stringify(this.labs))
         } else {
             throw Error(`Lab with name "${name}" already exists!`);

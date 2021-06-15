@@ -72,7 +72,7 @@ a:hover {
 
 .container-fluid {
     padding-top: 12vh !important;
-    padding-bottom: 120px !important
+    
 }
 
 .card {
@@ -219,7 +219,7 @@ thead tr:nth-child(3) th {
 }
 
 #btnMarcar {
-  margin-bottom: 5vh;
+  /* */
   margin-top: -10vh;
   margin-left: 120vh;
   background-color: #818496;
