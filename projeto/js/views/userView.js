@@ -14,7 +14,7 @@ export default class UserView {
         this.nameContact=document.querySelector("#name_contact")
         this.emailContact=document.querySelector("#email_contact")
         this.messageContact=document.querySelector("#message_contact")
-        this.messageContact=document.querySelector("#btnMessage")
+        this.messageContactBtn=document.querySelector("#btnMessage")
         // Gestão do form de registo
         this.frmRegister = document.querySelector('#frmRegister');
         this.registerUsername = document.querySelector('#txt_username_register');
@@ -48,7 +48,7 @@ export default class UserView {
      */
 
     bindContactUs(){
-        this.messageContact.addEventListener('click',()=>{
+        this.messageContactBtn.addEventListener('click',()=>{
             let message={name:this.nameContact.value,email:this.emailContact.value,comment:this.messageContact.value}
             this.messageController.register(message)
         })
@@ -126,7 +126,7 @@ export default class UserView {
             this.registerButton.style.visibility = 'hidden'
             this.logoutButton.style.visibility = 'visible'
             let loggedUser=sessionStorage.getItem('loggedUser')
-            document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img  src="https://via.placeholder.com/50"/></a>Bem-vindo ${loggedUser}</p></div>`;
+            document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img src="../img/avatar.png" width="20" height="20"/></a>       Bem-vindo ${loggedUser}</p></div>`;
         } else {
             this.loginButton.style.visibility = 'visible'
             this.registerButton.style.visibility = 'visible'

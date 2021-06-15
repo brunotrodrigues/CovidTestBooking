@@ -130,7 +130,6 @@
   
 #labelconfirm {
   margin-right: 5px;
-  margin-left: 30px
 }
 #cancelar {
   margin-right: 20px;
@@ -138,4 +137,18 @@
 
 #editarbtn {
   margin-left: 20px;
+}
+.table{
+  margin-bottom: 79px;
+}
+/* .table{
+  margin-right: auto !important;
+  margin-left: auto !important;
+} */
+#a0,#a1,#a2,.tableName{
+  text-align: center;
+}
+.leaderBoardTitle{
+  margin-top: 29px;
+  font-size: 19px;
 }

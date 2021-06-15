@@ -170,7 +170,7 @@ export default class LabView {
             this.registerButton.style.visibility = 'hidden'
             this.logoutButton.style.visibility = 'visible'
             let loggedUser=sessionStorage.getItem('loggedUser')
-            document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img  src="https://via.placeholder.com/50"/></a>Bem-vindo ${loggedUser}</p></div>`;
+            document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img src="../img/avatar.png" width="20" height="20"/></a>       Bem-vindo ${loggedUser}</p></div>`;
         } else {
             this.loginButton.style.visibility = 'visible'
             this.registerButton.style.visibility = 'visible'
