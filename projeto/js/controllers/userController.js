@@ -27,8 +27,8 @@ export default class userController {
             if (Edituser.username != sessionStorage.getItem('loggedUser')) {
                 //usernameAlterado, validar se esse username existe
                 if (!this.users.some(user => Edituser.username == sessionStorage.getItem('loggedUser'))) {
-                    localStorage.setItem('users', JSON.stringify(this.users.map(user => user.username == sessionStorage.getItem('loggedUser') ? Edituser : user)))
-
+                    localStorage.setItem('users', JSON.stringify(this.users.map(user => user.username == Edituser.username ? Edituser : user)))
+                    
                 } else { alert('Username em uso, retorne para o original ou tente outro') }
 
             } else {

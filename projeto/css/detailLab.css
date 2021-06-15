@@ -57,7 +57,11 @@ a:hover {
 
 .btn {
   border-radius: 99px;
-    width: 100px;
+  width: 100px;
+}
+.btn1 {
+  border-radius: 99px;
+  width: 150px;
 }
 /* Menu */
 
@@ -102,10 +106,6 @@ a:hover {
   background: #DCDBDB;
 }
 
-  /*--------------------------------------------------------------
-  # Horario
-  --------------------------------------------------------------*/
-
 .container-fluid {
     padding-top: 12vh !important;
 }
@@ -137,11 +137,6 @@ input {
     padding: 10px !important
 }
 
-/* .active {
-    border-radius: 6px !important;
-    background-image: linear-gradient(#90CAF9, #64B5F6) !important;
-    color: #000 !important
-} */
 
 .cell {
     border: 1px solid #BDBDBD;
@@ -172,7 +167,7 @@ input {
 }
 
 #btnMarcar {
-  margin-left: 120vh; 
+  margin-left: 115vh; 
   background-color: #3D5AFE;
   border-radius: 50px;  
 }
