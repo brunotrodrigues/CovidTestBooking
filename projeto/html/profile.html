@@ -46,10 +46,10 @@
           <li><a href="/index.html#contacts">Contactos</a></li>
         </ul>
       </nav>
-      <a href="#" class="appointment-btn scrollto" data-toggle="modal" id="btnLogin">Login</a>
-      <a href="#" class="appointment-btn scrollto" data-toggle="modal" id="btnRegister">Registar</a>
+      <a href="#" class="btn btn-primary" data-toggle="modal" id="btnLogin">Login</a>
+      <a href="#" class="btn btn-primary" data-toggle="modal" id="btnRegister">Registar</a>
       <div class="container1"></div>
-      <a href="#" class="appointment-btn scrollto" style="visibility: hidden;" id="btnLogout">Logout</a>
+      <a href="#" class="btn btn-primary" style="visibility: hidden;" id="btnLogout">Logout</a>
     </div>
   </header>
   <br><br><br><br><br><br><br><br>
@@ -58,48 +58,50 @@
       <h5 class="modal-title d-flex justify-content-center " id="exampleModalLabel">Editar perfil</h5>
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Username:</label>
-      <input type="text" class="form-control col-6  modalField" id="txt_username_edit"
+      <label id="label" for="" class="col-sm-2 col-form-label">Username:</label>
+      <input type="text" class="form-control col-3  modalField" id="txt_username_edit"
         aria-describedby="usernameHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Nome Completo:</label>
-      <input type="text" class="form-control col-6 modalField" id="txt_fullname_edit"
+      <label id="label" for="" class="col-sm-2 col-form-label">Nome Completo:</label>
+      <input type="text" class="form-control col-3 modalField" id="txt_fullname_edit"
         aria-describedby="fullnameHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">E-mail:</label>
-      <input type="email" class="form-control col-6 modalField" id="txt_email_edit"
+      <label id="label" for="" class="col-sm-2 col-form-label">E-mail:</label>
+      <input type="email" class="form-control col-3 modalField" id="txt_email_edit"
         aria-describedby="emailHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Morada:</label>
-      <input type="text" class="form-control col-6 modalField" id="txt_address_edit"
+      <label id="label" for="" class="col-sm-2 col-form-label">Morada:</label>
+      <input type="text" class="form-control col-3 modalField" id="txt_address_edit"
         aria-describedby="addressHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Telefone:</label>
-      <input type="tel" class="form-control col-6 modalField" id="txt_phone_eit"
+      <label id="label" for="" class="col-sm-2 col-form-label">Telefone:</label>
+      <input type="tel" class="form-control col-3 modalField" id="txt_phone_eit"
         aria-describedby="phoneHelp">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Genero:</label>
-      <select type="select" class="form-control col-6 modalField" id="txt_gender_edit">
+      <label id="label" for="" class="col-sm-2 col-form-label">Genero:</label>
+      <select type="select" class="form-control col-3 modalField" id="txt_gender_edit">
         <option value="" disabled selected>Escolha uma opção</option>
         <option value="male">Masculino</option>
         <option value="female">Feminino</option>
       </select>
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Data de Nascimento:</label>
+      <label id="label" for="" class="col-sm-2 col-form-label">Data de Nascimento:</label>
       <input type="date" name="bday" max="2021-06-20" min="1800-01-01"
-        class="form-control col-6 modalField" id="date_birthday_edit">
+        class="form-control col-3 modalField" id="date_birthday_edit">
     </div>
     <div class="form-group d-flex justify-content-center">
-      <label id="label" for="">Password:</label>
+      <label id="label" for="" class="col-sm-2 col-form-label">Password:</label>
       <input type="password" class="form-control col-3 modalField" id="txt_password_edit"
         aria-describedby="weightHelp">
-        <label id="labelconfirm" for="">Confirmar Password:</label>
+    </div>
+    <div class="form-group d-flex justify-content-center">    
+        <label id="labelconfirm" for="" class="col-sm-2 col-form-label">Confirmar Password:</label>
       <input type="password" class="form-control col-3 modalField"
         id="txt_confirmPassword_register" aria-describedby="pwconfimHelp" placeholder="Confirm">
     </div>

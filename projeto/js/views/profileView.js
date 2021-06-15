@@ -3,7 +3,7 @@ import UserController from '../controllers/UserController.js'
 export default class ProfileView {
     constructor() {
         this.userController = new UserController();
-
+        this.user=this.userController.getAll()
         this.userNameEdit = document.getElementById('txt_username_edit')
         this.fullnameEdit = document.getElementById('txt_fullname_edit')
         this.emailEdit = document.getElementById('txt_email_edit')
@@ -26,6 +26,12 @@ export default class ProfileView {
         // Atualiza botões tendo em conta se o user está autenticado ou não
         this.updateStatusUI();
 
+        this.loadUserData()
+
+    }
+
+    loadUserData(){
+
     }
     /**
      * Função que define um listener para o botão de logout
@@ -34,7 +40,7 @@ export default class ProfileView {
         this.logoutButton.addEventListener('click', () => {
             this.userController.logout();
             location.reload()
-        })
+        }) 
     }
 
     updateStatusUI() {
@@ -62,4 +68,6 @@ export default class ProfileView {
         const message = `<div class="alert alert-${type}" role="alert">${text}</div>`;
         event == 'login' ? this.loginMessage.innerHTML = message : this.registerMessage.innerHTML = message
     }
+
+
 }    

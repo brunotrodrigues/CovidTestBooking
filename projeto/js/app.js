@@ -13,7 +13,7 @@ class App {
             'adminUser':[AdminView],
             'labs': [
                 LabView,
-                UserView
+                //UserView
             ],
             'detailLab': [
                 DetailLabView,
@@ -21,7 +21,7 @@ class App {
             ],
             'profile': [
                 ProfileView,
-                UserView
+                //UserView
             ],
 
         };

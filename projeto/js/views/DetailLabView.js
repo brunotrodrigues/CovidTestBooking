@@ -1,24 +1,15 @@
 import labController from '../controllers/LabController.js'
 import UserController from '../controllers/UserController.js'
+import testController from "../controllers/testController.js"
 
 export default class DetailLabView {
 
     constructor() {
         this.labController = new labController()
         this.userController = new UserController()
-
-        this.dataTeste=document.querySelector("#dataTeste")
-        let date=new Date()
-        console.log(date.getUTCDate())
-        let year=date.getUTCFullYear()
-        let day=date.getUTCDate()
-        let month=date.getUTCMonth()
-        month++
-        console.log(year,day,month)
-        let min=year+"-"+month+"-"+day
-        let max=year+"-"+12+"-"+31
-        this.dataTeste.setAttribute('min',min)
-        this.dataTeste.setAttribute('max',max)
+        this.testController = new testController()
+        this.dataTeste = document.querySelector("#dataTeste")
+        this.setDate()
 
         // Gestão dos detalhes do lab
         this.labName = document.querySelector('#labName')
@@ -31,7 +22,7 @@ export default class DetailLabView {
         this.labSchedule = document.querySelector('#labschedule')
         this.confirmMessage = document.querySelector('#confirmMessage')
         this.frmConfirm = document.querySelector('#frmConfirm');
-        this.createSubmitModal=document.querySelector('#btnSim')
+        this.createSubmitModal = document.querySelector('#btnSim')
         this.schedule = document.querySelector("#schedule")
         //this.renderSchedule(this.labController.getLabs())
 
@@ -49,12 +40,86 @@ export default class DetailLabView {
 
         this.bindconfirmForm();
 
-        
-        
-        
+
+        this.bindButtonschedule()
+        this.loadDates()
+        this.changeColorsByTests()
+
+
+
+
+    }
+    changeColorsByTests() {
+        let tests = this.testController.getAll()
+        let btns = document.querySelectorAll(".cell")
+        for (const btn of btns) {
+
+            btn.style.backgroundColor = "white"
+            btn.style.color = "black"
+            btn.style.pointerEvents = 'auto'
+        }
+        tests.forEach(test => {
+            if (test.date == this.dataTeste.value) {
+                let btn = document.querySelector(`#${test.time}`)
+                btn.style.backgroundColor = "red";
+                btn.style.color = "white";
+                btn.style.pointerEvents = 'none'
+            }
+        });
+    }
+    loadDates() {
+        this.dataTeste.addEventListener('change', () => {
+            this.changeColorsByTests()
+        })
+    }
+    changeColors(id) {
+
+
+        let btns = document.querySelectorAll(".cell")
+
+
+        this.changeColorsByTests()
+
+        let btn = document.querySelector(`#${id}`)
+        btn.style.backgroundColor = "yellow";
+        btn.style.color = "color";
+        btn.style.pointerEvents = 'none'
+
+
     }
 
-    getCurrentDate(){
+    bindButtonschedule() {
+        let btns = document.querySelectorAll(".cell")
+        for (const btn of btns) {
+            btn.addEventListener("click", () => {
+                if (!btn.disabled) {
+                    const time = btn.id
+                    sessionStorage.setItem('SelectedTime', time)
+                    this.changeColors(time)
+                }
+
+            })
+        }
+    }
+
+    setDate() {
+        let date = new Date()
+        console.log(date.getUTCDate())
+        let year = date.getUTCFullYear()
+        let day = date.getUTCDate()
+        let month = date.getUTCMonth()
+        month++
+        month < 10 ? month = '0' + month : month
+        day < 10 ? day = '0' + day : day
+        let min = `${year}-${month}-${day}`
+        let max = year + "-" + 12 + "-" + 31
+        console.log(min, max)
+        this.dataTeste.value = min
+        this.dataTeste.setAttribute('max', max)
+        this.dataTeste.setAttribute('min', min)
+        sessionStorage.removeItem('SelectedTime')
+    }
+    getCurrentDate() {
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -80,13 +145,13 @@ export default class DetailLabView {
         const currentLab = this.labController.getCurrentLab()
 
         this.labSchedule = currentLab.schedule
-        
+
         this.labSchedule = this.labSchedule.split("às")
         // Gerir o schedule
         let result = '<div class="row text-center mx-0">'
 
         let horaInicial = parseInt(this.labSchedule[0])
-        let horaFinal = parseInt(this.labSchedule[1]) 
+        let horaFinal = parseInt(this.labSchedule[1])
         let i;
         for (i = horaInicial; i < horaFinal; i++) {
             result += this.generateTimeCard(i)
@@ -127,8 +192,8 @@ export default class DetailLabView {
     bindconfirmForm() {
         this.frmConfirm.addEventListener('submit', event => {
             event.preventDefault();
-            this.displayMessage('confirm', 'Marcação efetuada!', 'success');
-            
+            //this.displayMessage('confirm', 'Marcação efetuada!', 'success');
+            this.testController.addShedule(sessionStorage.getItem('lab'), sessionStorage.getItem('SelectedTime'), this.dataTeste.value)
             // Espera 1 seg. antes de fazer refresh à pagina
             // Assim o utilizador pode ver a mensagem na modal antes de a mesma se fechar
             setTimeout(() => { location.reload() }, 1000);
@@ -138,7 +203,7 @@ export default class DetailLabView {
     /**
      * Função que define um listener para o botão de logout
      */
-     bindLogout() {
+    bindLogout() {
         this.logoutButton.addEventListener('click', () => {
             this.userController.logout();
             location.reload()
@@ -151,7 +216,7 @@ export default class DetailLabView {
             this.loginButton.style.visibility = 'hidden'
             this.registerButton.style.visibility = 'hidden'
             this.logoutButton.style.visibility = 'visible'
-            let loggedUser=sessionStorage.getItem('loggedUser')
+            let loggedUser = sessionStorage.getItem('loggedUser')
             document.querySelector('.container1').innerHTML += `<div class="welcomeuser"><p><a href="../html/profile.html"><img  src="https://via.placeholder.com/50"/></a>Bem-vindo ${loggedUser}</p></div>`;
         } else {
             this.loginButton.style.visibility = 'visible'
@@ -166,9 +231,7 @@ export default class DetailLabView {
      * @param {string} text mensagem a ser exibida 
      * @param {string} type danger - caso seja uma mensagem de erro; success - caso seja uma mensagem de sucesso
      */
-    displayMessage(event, text, type) {
-        const message = `<div class="alert alert-${type}" role="alert">${text}</div>`;
-        event == 'login' ? this.loginMessage.innerHTML = message : this.registerMessage.innerHTML = message
-    }
+
+
 
 }

@@ -1,17 +1,20 @@
 import UserController from '../controllers/userController.js'
+import messageController from "../controllers/messageController.js"
 
 export default class UserView {
     constructor() {
         this.userController = new UserController();
-
+        this.messageController=new messageController();
         // Gestão do form de login
         this.frmLogin = document.querySelector('#frmLogin');
         this.loginUsername = document.querySelector('#txt_username_login');
         this.loginPassword = document.querySelector('#txt_password_login');
         this.loginMessage = document.querySelector('#loginMessage')
         this.bindLoginForm()
-
-
+        this.nameContact=document.querySelector("#name_contact")
+        this.emailContact=document.querySelector("#email_contact")
+        this.messageContact=document.querySelector("#message_contact")
+        this.messageContact=document.querySelector("#btnMessage")
         // Gestão do form de registo
         this.frmRegister = document.querySelector('#frmRegister');
         this.registerUsername = document.querySelector('#txt_username_register');
@@ -25,7 +28,7 @@ export default class UserView {
         this.registerPassword2 = document.querySelector('#txt_confirmPassword_register');
         this.registerMessage = document.querySelector('#registerMessage')
         this.bindRegisterForm();
-
+        
         // Gestão dos botões da navbar
         this.loginButton = document.querySelector('#btnLogin');
         this.registerButton = document.querySelector('#btnRegister');
@@ -37,11 +40,19 @@ export default class UserView {
 
         // Atualiza botões tendo em conta se o user está autenticado ou não
         this.updateStatusUI();
+        this.bindContactUs()
     }
 
     /**
      * Função que define um listener para o botão de registo
      */
+
+    bindContactUs(){
+        this.messageContact.addEventListener('click',()=>{
+            let message={name:this.nameContact.value,email:this.emailContact.value,comment:this.messageContact.value}
+            this.messageController.register(message)
+        })
+    }
     bindRegisterForm() {
         this.frmRegister.addEventListener('submit', event => {
             event.preventDefault();

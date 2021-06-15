@@ -16,9 +16,6 @@ a:hover {
   text-decoration: none;
 }  
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 #header {
   background: #fff;
   transition: all 0.5s;
@@ -27,46 +24,6 @@ a:hover {
   top: 0px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
   
-}
-
-#header.header-scrolled {
-  top: 0;
-}
-
-#header .logo {
-  font-size: 32px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
-}
-
-#header .logo a {
-  color: #2c4964;
-}
-
-#header .logo img {
-  max-height: 40px;
-}
-
-@media (max-width: 992px) {
-  #header {
-    top: 0;
-  }
-  #header .logo {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 1366px) {
-  #dropdownButton {
-    margin-top: 5vh;
-  }
-  #gostos, #comentarios{
-    margin-bottom: 2vh;
-  }
 }
 
 .nav-menu ul {
@@ -101,9 +58,8 @@ a:hover {
   border-color: #1977cc;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+/* Footer */
+
 #footer {
   color: #444444;
   font-size: 14px;
@@ -262,12 +218,11 @@ thead tr:nth-child(3) th {
 
 }
 
-
 #btnMarcar {
   margin-bottom: 5vh;
   margin-top: -10vh;
   margin-left: 120vh;
-  background-color: #3D5AFE;
+  background-color: #818496;
   border-radius: 50px;  
 }
 
