@@ -71,15 +71,27 @@
             </div>
         </div>
     </div>
-    <script>
+    <script> 
         let map;
         function initMap() {
+            var labs = JSON.parse(window.localStorage.getItem('labs'));
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: 41.1556100, lng: -8.6309900 },
                 zoom: 14,
                 mapTypeId: "hybrid"
-        });
-    }
+            });
+            for (const lab of labs){
+                const lat = Number(lab.latitude)
+                const long = Number(lab.longitude)
+                const coordenates = { lat: lat, lng: long };
+                marker = new google.maps.Marker({
+                position: coordenates,
+                map,
+                title: lab.name,
+                });
+            };
+
+        }
 
     </script>
 
